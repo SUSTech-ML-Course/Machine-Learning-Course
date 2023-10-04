@@ -80,7 +80,7 @@ $p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 
 Please derive its entropy $\mathbf{H[X]}$.
 
-*(b)* Write down the mutual information $\mathbf{I(y|x)}$. Then show the following equation
+*(b)* Write down the mutual information $\mathbf{I(y, x)}$. Then show the following equation
 
 $\mathbf{I[x,y]=H[x]-H[x|y]=H[y]-H[y|x]}$
 
