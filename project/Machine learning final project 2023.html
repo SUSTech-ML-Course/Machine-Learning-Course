@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Machine learning final project 2023</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="machine-learning-final-project-2023">Machine learning final project 2023</h1>
+<p>In this project, please choose <strong>ONE</strong> of the following eight jobs (choosing more than one job will <strong>NOT</strong> give you more score):</p>
+<ul>
+<li><a href="#1-object-detection-and-tracking">1. Object detection and tracking</a></li>
+<li><a href="#2-gan-for-self-driving-data-augmentation">2. GAN for self-driving data augmentation</a></li>
+<li><a href="#3-carla-simulator">3. CARLA Simulator</a></li>
+<li><a href="#4-traffic-sign-detection-and-recognition">4. Traffic-Sign Detection and Recognition</a></li>
+<li><a href="#5-lane-detection">5. Lane Detection</a></li>
+<li><a href="#6-vehicle-road-cooperative">6. Vehicle road cooperative</a></li>
+<li><a href="#7-rl-based-motion-planning-for-robot">7. RL-based Motion Planning for Robot</a></li>
+<li><a href="#8-semantic-segmentation">8. Semantic Segmentation</a></li>
+</ul>
+<h2 id="1-object-detection-and-tracking">1. Object detection and tracking</h2>
+<h3 id="introduction">Introduction</h3>
+<p>In autonomous driving, object detection and object tracking are crucial tasks that play a significant role in the decision-making process during the operation of intelligent vehicles.</p>
+<p>The current object detection and object tracking tasks can be categorized based on methods into <strong>Camera-based</strong>, <strong>LiDAR-based</strong>, and <strong>Camera-LiDAR Fusion-based</strong> approaches. They can also be classified based on tasks into detection and <strong>tracking</strong>. <strong>This project offers you four tasks, and you can choose any one to complete.</strong></p>
+<h3 id="requirements">Requirements</h3>
+<p>You are required to:</p>
+<ol>
+<li>Choose one of these works in the task you have selected, and read its research paper and code. You should fully understand the work and know exactly how to describe it to others.</li>
+<li>Reproduce the research paper you have selected on its dataset (if there is an open-source repository of the work you have selected, you can choose to run the code successfully instead of reproducing, but you should know exactly how the code works).</li>
+<li>Train and test your code on any autonomous-driving-related dataset that is different from the dataset in the work you have selected.</li>
+<li>(Optional) Test your code in the campus. (This part is not required if you choose LiDAR-related task, it is also optional for other tasks)</li>
+</ol>
+<h3 id="tasks">Tasks</h3>
+<h4 id="camera-based-2d-object-detection">Camera-based 2D Object Detection</h4>
+<p>2D object detection involves using a camera to detect objects in 2D images, with the most classic algorithms such as R-CNN, and the most widely applied one being YOLO.</p>
+<table>
+  <colgroup>
+    <col style="border: 1px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Paper</th>
+    <th>Recommended Codebase</th>
+  </tr>
+  <tr>
+    <th>Faster R-CNN</th>
+    <td>Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks</td>
+    <td rowspan=3><a href="https://github.com/facebookresearch/detectron2">https://github.com/facebookresearch/detectron2</a><br>or<br><a href="https://github.com/open-mmlab/mmdetection">https://github.com/open-mmlab/mmdetection</a><br>or<br><a href="https://github.com/PaddlePaddle/PaddleDetection">https://github.com/PaddlePaddle/PaddleDetection</a></td>
+  </tr>
+  <tr>
+    <th>RetinaNet</th>
+    <td>Focal Loss for Dense Object Detection</td>
+  </tr>
+  <tr>
+    <th>Cascade R-CNN</th>
+    <td>Cascade R-CNN: Delving into High Quality Object Detection</td>
+  </tr>
+  <tr>
+    <th>DCNv2</th>
+    <td>Deformable Convolutional Networks</td>
+    <td rowspan=3><a href="https://github.com/open-mmlab/mmdetection">https://github.com/open-mmlab/mmdetection</a></td>
+  </tr>
+  <tr>
+    <th>CenterNet</th>
+    <td>Objects as Points</td>
+  </tr>
+  <tr>
+    <th>Deformable DETR</th>
+    <td>Deformable DETR: Deformable Transformers for End-to-End Object Detection</td>
+  </tr>
+  <tr>
+    <th>YOLOv3</th>
+    <td>YOLOv3: An Incremental Improvement</td>
+    <td><a href="https://github.com/ultralytics/yolov3">https://github.com/ultralytics/yolov3</a></td>
+  </tr>
+  <tr>
+    <th>PP-YOLO</th>
+    <td>PP-YOLO: An Effective and Efficient Implementation of Object Detector</td>
+    <td><a href="https://github.com/PaddlePaddle/PaddleDetection">https://github.com/PaddlePaddle/PaddleDetection</a></td>
+  </tr>
+  <tr>
+    <th>YOLOv5</th>
+    <td>No paper</td>
+    <td><a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a></td>
+  </tr>
+  <tr>
+    <th>YOLOX</th>
+    <td>YOLOX: Exceeding YOLO Series in 2021</td>
+    <td><a href="https://github.com/Megvii-BaseDetection/YOLOX">https://github.com/Megvii-BaseDetection/YOLOX</a></td>
+  </tr>
+</table>
+<h4 id="lidar-based-3d-object-detection">LiDAR-based 3D Object Detection</h4>
+<p>3D object detection involves detecting objects in 3D point cloud data obtained from LiDAR. Unlike 2D object detection, you are working with three-dimensional data, this requires you to know 3D convolution and some other related knowledge.</p>
+<table>
+  <colgroup>
+    <col style="border: 1px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Paper</th>
+    <th>Recommended Codebase</th>
+  </tr>
+  <tr>
+    <th>SECOND</th>
+    <td>SECOND: Sparsely embedded convolutional detection</td>
+    <td rowspan=2><a href="https://github.com/open-mmlab/mmdetection3d">https://github.com/open-mmlab/mmdetection3d</a></td>
+  <tr>
+  <tr>
+    <th>PointPillars</th>
+    <td>PointPillars: Fast Encoders for Object Detection from Point Clouds</td>
+  </tr>
+  <tr>
+    <th>Point R-CNN</th>
+    <td>PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud</td>
+    <td><a href="https://github.com/open-mmlab/OpenPCDe">https://github.com/open-mmlab/OpenPCDe</a></td>
+  </tr>
+  <tr>
+    <th>Voxel R-CNN</th>
+    <td>Voxel R-CNN: Towards High Performance Voxel-based 3D Object Detection</td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Hollow-3D<br>R-CNN</th>
+    <td>From Multi-View to Hollow-3D: Hallucinated Hollow-3D R-CNN for 3D Object Detection</td>
+    <td><a href="https://github.com/djiajunustc/H-23D_R-CNN">https://github.com/djiajunustc/H-23D_R-CNN</a></td>
+  </tr>
+  <tr>
+    <th>SE-SSD</th>
+    <td>SE-SSD: Self-Ensembling Single-Stage Object Detector from Point Cloud</td>
+    <td><a href="https://github.com/Vegeta2020/SE-SSD">https://github.com/Vegeta2020/SE-SSD</a></td>
+  </tr>
+  <tr>
+    <th>SA-Det3D</th>
+    <td>SA-Det3D: Self-Attention Based Context-Aware 3D Object Detection</td>
+    <td><a href="https://github.com/AutoVision-cloud/SA-Det3D">https://github.com/AutoVision-cloud/SA-Det3D</a></td>
+  </tr>
+  <tr>
+    <th>CT3D</th>
+    <td>Improving 3D Object Detection with Channel-wise Transformer</td>
+    <td><a href="https://github.com/hlsheng1/CT3D">https://github.com/hlsheng1/CT3D</a></td>
+  </tr>
+</table>
+<h4 id="camera-lidar-fusion-based-3d-object-detection">Camera-LiDAR Fusion-based 3D Object Detection</h4>
+<p>Image data and LiDAR data contain different features , however, they each lose some information. One advance approach is to combine the two methods together, thereby taking advantage of their complementary strengths.</p>
+<table>
+  <colgroup>
+    <col style="border: 1px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Paper</th>
+    <th>Recommended Codebase</th>
+  </tr>
+  <tr>
+    <th>EPNet</th>
+    <td>EPNet: Enhancing Point Features with Image Semantics for 3D Object Detection</td>
+    <td><a href="https://github.com/happinesslz/EPNet">https://github.com/happinesslz/EPNet</a></td>
+  </tr>
+  <tr>
+    <th>Frustum-ConvNet</th>
+    <td>Frustum ConvNet: Sliding Frustums to Aggregate Local Point-Wise Features for Amodal 3D Object Detection</td>
+    <td><a href="https://github.com/Gorilla-Lab-SCUT/frustum-convnet">https://github.com/Gorilla-Lab-SCUT/frustum-convnet</a></td>
+  </tr>
+  <tr>
+    <th>Faraway-Frustum</th>
+    <td>Faraway-Frustum: Dealing with Lidar Sparsity for 3D Object Detection using Fusion</td>
+    <td><a href="https://github.com/dongfang-steven-yang/faraway-frustu">https://github.com/dongfang-steven-yang/faraway-frustu</a></td>
+  </tr>
+  <tr>
+    <th>CLOCs</th>
+    <td>CLOCs: Camera-LiDAR Object Candidates Fusion for 3D Object Detection</td>
+    <td><a href="https://github.com/pangsu0613/CLOCs">https://github.com/pangsu0613/CLOCs</a></td>
+  </tr>
+  <tr>
+    <th>MVAF-Net</th>
+    <td>Multi-View Adaptive Fusion Network for 3D Object Detection</td>
+    <td><a href="https://github.com/wangguojun2018/MVAF-Net">https://github.com/wangguojun2018/MVAF-Net</a></td>
+  </tr>
+</table>
+<h4 id="multi-object-tracking">Multi-Object Tracking</h4>
+<p>You need to know the motion trajectory of the detected targets, which requires you to track your targets. Therefore, multi-object tracking has been proposed.</p>
+<table>
+  <colgroup>
+    <col style="border: 1px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Paper</th>
+    <th>Recommended Codebase</th>
+  </tr>
+  <tr>
+    <th>DeepSORT</th>
+    <td>Simple Online and Realtime Tracking with a Deep Association Metric</td>
+    <td rowspan=2><a href="https://github.com/PaddlePaddle/PaddleDetection">https://github.com/PaddlePaddle/PaddleDetection</a></td>
+  </tr>
+  <tr>
+    <th>FairMOT</th>
+    <td>FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking</td>
+  </tr>
+  <tr>
+    <th>Tracktor</th>
+    <td>Tracking without Bells and Whistles</td>
+    <td><a href="https://github.com/open-mmlab/mmtracking">https://github.com/open-mmlab/mmtracking</a></td>
+  </tr>
+  <tr>
+    <th>CenterTrack</th>
+    <td>Tracking Objects as Points</td>
+    <td><a href="https://github.com/xingyizhou/CenterTrack">https://github.com/xingyizhou/CenterTrack</a></td>
+  </tr>
+  <tr>
+    <th>GSDT</th>
+    <td>Joint Object Detection and Multi-Object Tracking with Graph Neural Networks</td>
+    <td><a href="https://github.com/yongxinw/GSDT">https://github.com/yongxinw/GSDT</a></td>
+  </tr>
+  <tr>
+    <th>DEFT</th>
+    <td>DEFT: Detection Embeddings for Tracking</td>
+    <td><a href="https://github.com/MedChaabane/DEFT">https://github.com/MedChaabane/DEFT</a></td>
+  </tr>
+  <tr>
+    <th>CTracker</th>
+    <td>Chained-Tracker: Chaining Paired Attentive Regression Results for End-to-End Joint Multiple-Object Detection and Tracking</td>
+    <td><a href="https://github.com/pjl1995/CTracker">https://github.com/pjl1995/CTracker</a></td>
+  </tr>
+  <tr>
+    <th>EagerMOT</th>
+    <td>EagerMOT: 3D Multi-Object Tracking via Sensor Fusion</td>
+    <td><a href="https://github.com/aleksandrkim61/EagerMOT">https://github.com/aleksandrkim61/EagerMOT</a></td>
+  </tr>
+  <tr>
+    <th>PC3T</th>
+    <td>3D Multi-Object Tracking in Point Clouds Based on Prediction Confidence-Guided Data Association</td>
+    <td><a href="https://github.com/hailanyi/3D-Multi-Object-Tracker">https://github.com/hailanyi/3D-Multi-Object-Tracker</a></td>
+  </tr>
+  <tr>
+    <th>QD-3DT</th>
+    <td>Monocular Quasi-Dense 3D Object Tracking</td>
+    <td><a href="https://github.com/SysCV/qd-3dt">https://github.com/SysCV/qd-3dt</a></td>
+  </tr>
+  <tr>
+    <th>ByteTrack</th>
+    <td>ByteTrack: Multi-Object Tracking by Associating Every Detection Box</td>
+    <td><a href="https://github.com/ifzhang/ByteTrack">https://github.com/ifzhang/ByteTrack</a></td>
+  </tr>
+  <tr>
+    <th>UniTrack</th>
+    <td>Do different tracking tasks require different appearance model?</td>
+    <td><a href="https://github.com/Zhongdao/UniTrack">https://github.com/Zhongdao/UniTrack</a></td>
+  </tr>
+  <tr>
+    <th>TraDeS</th>
+    <td>Track to Detect and Segment: An Online Multi-Object Tracker</td>
+    <td><a href="https://github.com/JialianW/TraDeS">https://github.com/JialianW/TraDeS</a></td>
+  </tr>
+  <tr>
+    <td>MOTR</td>
+    <td>MOTR: End-to-End Multiple-Object Tracking with TRansformer</td>
+    <td><a href="https://github.com/megvii-model/MOTR">https://github.com/megvii-model/MOTR</a></td>
+  </tr>
+  <tr>
+    <th>TransTrack</th>
+    <td>TransTrack: Multiple Object Tracking with Transformer</td>
+    <td><a href="https://github.com/PeizeSun/TransTrack">https://github.com/PeizeSun/TransTrack</a></td>
+  </tr>
+</table>
+<h2 id="2-gan-for-self-driving-data-augmentation">2. GAN for self-driving data augmentation</h2>
+<h3 id="introduction-1">Introduction</h3>
+<p>Visual perception module is an important part of an intelligent vehicles, which is expected to detect and understand the environment. Therefore, there exists a vast amount of algorithms for visual perception tasks including object detection, semantic segmentation, instance segmentation, and many more.</p>
+<p>However, the appearance of some unexpected and unknown situations while driving will affect the performance of the perception module. A reliable detection of those situations that deviate from normal traffic situations will increase safety in autonomous driving.</p>
+<p>Data augmentation with GAN is a useful solution, which gives us the possibility to enhance existing dataset and improves the ability of generalization of the visual module.</p>
+<p>There is an example of image translation generated by GAN:<br>
+<a href="https://www.youtube.com/watch?v=dqxqbvyOnMY">
+<img src="file:///c:\Users\wangd\Desktop\proj\img\gan_sv.jpg"/>
+</a></p>
+<h3 id="project-description">Project description</h3>
+<p>In this project, you are expected to use GAN for data augmentation to improve the performance of the object detection model <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>. You can choose one kind of image translation such as sunny to rainy, sim to real, summer to winter, day to night and their inverse to do the data augmentation.</p>
+<p>For example, if you choose day to night image translation, you should select an object detection model <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>, one daytime dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>d</mi><mi>a</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{day}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> and one night dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>n</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{night}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ni</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>. <strong>You cannot download the pre-trained object detection model.</strong> After that, train the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>d</mi><mi>a</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{day}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> and test it on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>n</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{night}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ni</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> to get the baseline. Using GAN and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>d</mi><mi>a</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{day}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> to generate your own night dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{mine}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">min</span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Again, train the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> with the new dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{mine}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">min</span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and test it on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>n</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{night}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ni</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> to get the final result. The final result is expected to be better than the baseline.</p>
+<h3 id="project-objectives">Project objectives</h3>
+<ul>
+<li>Understand the working principle of GAN</li>
+<li>(Optional) Make progress on existing work</li>
+</ul>
+<h3 id="project-steps">Project steps</h3>
+<blockquote>
+<p>If you do not konw how to do this project, you can refer to these steps. Alternatively, you can choose your own method.</p>
+</blockquote>
+<h3 id="step-1">Step 1</h3>
+<p>Selet an object detection model <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>, a source domain dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">D_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and a target domain dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">D_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Train the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> with the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">D_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and test on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">D_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to get the baseline.</p>
+<h3 id="step-2">Step 2</h3>
+<p>Using GAN and the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">D_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> as the input to generate your own dataset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{mine}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">min</span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+<h3 id="step-3">Step 3</h3>
+<p>Train the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{mine}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">min</span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and test on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">D_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to get the final result. Try your best to make the final result better than the baseline.</p>
+<h3 id="optional-step-4">(Optional) Step 4</h3>
+<p>Make the model perform better than the SOTA.</p>
+<h2 id="appendix">Appendix</h2>
+<h3 id="paper-reading">Paper Reading</h3>
+<ul>
+<li>M.-Y. Liu, T. Breuel, and J. Kautz, “Unsupervised Image-to-Image Translation Networks,” in Advances in Neural Information Processing Systems, pp. 700–708, 2017.</li>
+<li>M.  Uˇriˇcáˇr,  P.  Kˇrížek,  D.  Hurych,  I.  Sobh,  S.  Yogamani,  and  P.  Denny,“Yes, we gan: Applying adversarial techniques for autonomous driving,”Electronic Imaging, vol. 2019, no. 15, p. 48–1–4</li>
+</ul>
+<h3 id="dataset">Dataset</h3>
+<ul>
+<li><a href="https://www.cvlibs.net/datasets/kitti/">KITTI</a></li>
+<li><a href="https://www.vis.xyz/bdd100k/">BDD100K</a></li>
+<li><a href="https://www.nuscenes.org/">nuscenes</a></li>
+</ul>
+<h3 id="others">Others</h3>
+<ul>
+<li><a href="https://github.com/mingyuliutw/UNIT">UNIT</a></li>
+</ul>
+<h2 id="3-carla-simulator">3. CARLA Simulator</h2>
+<h3 id="project-background">Project Background</h3>
+<p>CARLA (Car Learning to Act) is a powerful open-source simulation platform designed to support research and development in autonomous driving technology. It offers a safe, cost-effective, and highly customizable environment for:</p>
+<ul>
+<li>Developing and validating autonomous driving algorithms.</li>
+<li>Simulating various sensors for accurate environmental recognition.</li>
+<li>Creating intelligent agents to test decision-making capabilities.</li>
+<li>Evaluating autonomous driving systems in complex urban scenarios.</li>
+</ul>
+<p>Using CARLA reduces the risks and costs associated with real-world testing while ensuring reproducible and consistent results, making it an indispensable tool for advancing autonomous driving research and development.</p>
+<h3 id="project-description-1">Project description</h3>
+<p>CARLA is an incredibly powerful simulator that allows us to test various machine learning or deep learning algorithms, assessing their robustness in real-world conditions. As such, this project is aimed at implementing a range of algorithms within the CARLA simulator environment. To begin with, students should be able to gather the data required for their projects from the CARLA simulator, which can collect data from various sensors such as RGB images, point clouds/depth maps, IMU data, and more. Subsequently, this collected data can be used for the necessary models. To distinguish these projects from others, we offer a variety of optional project topics; however, it's important to note that all topics must be completed within the CARLA simulator framework.</p>
+<h3 id="project-objectives-1">Project objectives</h3>
+<p>In the environment of carla simulator, complete various tasks, such as object recognition, motion prediction, motion planning, etc.</p>
+<h3 id="methodology">Methodology</h3>
+<ol>
+<li>Simulate real-world vehicle dynamic and traffic flow in CARLA</li>
+<li>Collect information from sensors(LiDAR,camera,etc.) on the vehicle and store it in a format that is easy to read for neural networks/machine learning algorithms. For example, RGB images are stored as jpg, point clouds are stored as pts and etc.</li>
+<li>Use collected data to complete various tasks</li>
+</ol>
+<h3 id="prepare-the-development-env">Prepare the development env</h3>
+<blockquote>
+<p>The <strong>Hardware</strong> recommended for the CARLA Simulator :</p>
+<ul>
+<li>CPU : Quad-core Intel or AMD processor, 2.5 GHz or faster</li>
+<li>GPU : At least 6 GB GPU,  recommend 8 GB</li>
+<li>Disk space : About 20 GB of space</li>
+</ul>
+<p>The <strong>Software</strong> recommended for the CARLA Simulator :</p>
+<ul>
+<li>System : Highly recommended on <strong>Ubuntu 18.04</strong>, Windows is also possible, but not the preferred option.</li>
+<li>Graphics API : Vulkan or Open GL</li>
+</ul>
+<p><strong>Notice</strong> : Starting from version 0.9.12, CARLA runs on Unreal Engine 4.26 which only supports the Vulkan graphics API. Previous versions of CARLA could be configured to use OpenGL.</p>
+</blockquote>
+<ol>
+<li>Install Python + IDE</li>
+<li>Install CARLA Simulator in your computer, according to this <a href="https://carla.readthedocs.io/en/latest/start_quickstart/">guideline</a>.</li>
+<li>Install essential libraries for Machine Learning in Python
+<ol>
+<li><strong>Numpy,</strong> a package with support for mathematical operations on multidimensional data—was the most imported package, used in nearly three-quarters of machine learning and data science projects. (<a href="https://numpy.org/">https://numpy.org/</a>)</li>
+<li><strong>pandas,</strong> a very popular library,it can easily fetch data from different sources like SQL databases, CSV, Excel, JSON files and manipulate the data to perform operations on it. (<a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>)</li>
+<li><strong>matplotlib,</strong> a visualization library.(<a href="https://matplotlib.org/">https://matplotlib.org/</a>)</li>
+<li><strong>CUDA &amp; CuDNN,</strong> CUDA Toolkit provides a development environment for creating high performance GPU-accelerated applications. With the CUDA Toolkit, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems</li>
+<li><strong>Pytorch,</strong> PyTorch is an optimized tensor library for deep learning using GPUs and CPUs. ( <a href="https://pytorch.org/get-">https://pytorch.org/get-</a> started/locally/)</li>
+</ol>
+</li>
+</ol>
+<h3 id="project-tasks">Project tasks</h3>
+<p><strong>Topic 1 : Vehicle Detection</strong></p>
+<p>Utilize the dataset collected from CARLA for vehicle recognition tasks. There are no specific constraints on the neural network model; you can utilize any data obtained from the CARLA simulator, such as RGB images, depth maps, and more.</p>
+<ol>
+<li>You need to collect the data from CARLA simulator. Some links below maybe useful.</li>
+</ol>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/613152701">https://zhuanlan.zhihu.com/p/613152701</a></li>
+<li><a href="https://github.com/carla-simulator/data-collector">https://github.com/carla-simulator/data-collector</a></li>
+<li><a href="https://carla.readthedocs.io/en/latest/tuto_G_retrieve_data/">https://carla.readthedocs.io/en/latest/tuto_G_retrieve_data/</a></li>
+<li><a href="https://github.com/SIAT-INVS/CarlaFLCAV/tree/main/FLDatasetTool">https://github.com/SIAT-INVS/CarlaFLCAV/tree/main/FLDatasetTool</a></li>
+</ul>
+<ol start="2">
+<li>From RGB images, vehicles can be accurately identified. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/lufficc/SSD">https://github.com/lufficc/SSD</a></li>
+<li><a href="https://github.com/ultralytics/yolov3">https://github.com/ultralytics/yolov3</a></li>
+<li><a href="https://github.com/rbgirshick/py-faster-rcnn">https://github.com/rbgirshick/py-faster-rcnn</a></li>
+</ul>
+<ol start="3">
+<li><strong>(Advanced requirements)</strong> The implemented model needs to ensure fps and achieve real-time detection efficiency. Communicate with the CARLA simulator and identify vehicles in real time.  Some links below maybe useful.</li>
+</ol>
+<ul>
+<li><a href="https://github.com/dd-iuonac/object-detector-in-carla">https://github.com/dd-iuonac/object-detector-in-carla</a></li>
+<li><a href="https://github.com/shayantaherian/Object_Detection_Carla">https://github.com/shayantaherian/Object_Detection_Carla</a></li>
+</ul>
+<p><strong>Topic 2 : Motion Planning</strong></p>
+<p>Motion planning is a common challenge in autonomous driving, typically involving requirements such as motion control and object recognition. This topic can be simplified to the basic requirement of successfully navigating along a randomly generated road without leaving the roadway. Advanced requirements may encompass multitasking scenarios.</p>
+<ol>
+<li>You need to collect the data from CARLA simulator.</li>
+<li>Train the network so that the vehicle does not drive off the road. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/zhangfuyang/rl_CARLA">https://github.com/zhangfuyang/rl_CARLA</a></li>
+<li><a href="https://github.com/samuelvara/Self-Driving-Car-on-CARLA-">https://github.com/samuelvara/Self-Driving-Car-on-CARLA-</a></li>
+<li><a href="https://medium.com/asap-report/introduction-to-the-carla-simulator-training-a-neural-network-to-control-a-car-part-1-e1c2c9a056a5">https://medium.com/asap-report/introduction-to-the-carla-simulator-training-a-neural-network-to-control-a-car-part-1-e1c2c9a056a5</a></li>
+<li><a href="https://github.com/angelkim88/CARLA-Lane_Detection">https://github.com/angelkim88/CARLA-Lane_Detection</a></li>
+</ul>
+<ol start="3">
+<li><strong>(Advanced requirements)</strong> Can identify signs such as traffic lights and stop in time at red lights. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/erdos-project/pylot">https://github.com/erdos-project/pylot</a></li>
+<li><a href="https://arxiv.org/pdf/1911.10868.pdf">https://arxiv.org/pdf/1911.10868.pdf</a></li>
+<li><a href="https://github.com/martisaju/CARLA-Speed-Traffic-Sign-Detection-Using-Yolo">https://github.com/martisaju/CARLA-Speed-Traffic-Sign-Detection-Using-Yolo</a></li>
+</ul>
+<ol start="3">
+<li><strong>(Advanced requirements)</strong> Motion planning for obstacle avoidance. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/paulyehtw/Motion-Planning-on-CARLA">https://github.com/paulyehtw/Motion-Planning-on-CARLA</a></li>
+</ul>
+<p><strong>Topic 3 : Object Tracking</strong></p>
+<p>Object tracking allows the controlled vehicle to track a certain vehicle, and the trained model can enable the vehicle to follow a vehicle in front, including turning, moving forward, and stopping, etc.</p>
+<ol>
+<li>You need to collect the data from CARLA simulator.</li>
+<li>Train the network so that the vehicle can follow the another vehicle. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/JahodaPaul/autonomous-car-chase">https://github.com/JahodaPaul/autonomous-car-chase</a></li>
+</ul>
+<ol start="3">
+<li><strong>(Advanced requirements)</strong> Motion Prediction, can predict the movement of a specific vehicle. Some links below maybe useful</li>
+</ol>
+<ul>
+<li><a href="https://github.com/perseus784/Vehicle_Collision_Prediction_Using_CNN-LSTMs">https://github.com/perseus784/Vehicle_Collision_Prediction_Using_CNN-LSTMs</a></li>
+<li><a href="https://www.bilibili.com/video/BV11X4y1374s">https://www.bilibili.com/video/BV11X4y1374s</a></li>
+<li><a href="https://github.com/OpenDriveLab/UniAD">https://github.com/OpenDriveLab/UniAD</a></li>
+</ul>
+<h2 id="4-traffic-sign-detection-and-recognition">4. Traffic-Sign Detection and Recognition</h2>
+<h3 id="project-background-1">Project Background</h3>
+<p>Traffic-sign detection and recognition refer to the technology and processes used to identify and interpret various road signs and signals in the context of intelligent transportation systems (ITS) and autonomous vehicles. This vital field plays a crucial role in enhancing road safety, improving traffic management, and enabling the successful deployment of autonomous vehicles.</p>
+<h3 id="project-description-2">Project Description</h3>
+<p>This project aims to delve into the intricacies of Traffic-Sign Detection and Recognition, ultimately developing and deploying a custom deep neural network to address real-world scenarios.</p>
+<h3 id="project-objectives-2">Project Objectives</h3>
+<ul>
+<li>Based on their research, students will meticulously evaluate the various models and select the most suitable one to implement for this project. The chosen model should exhibit the potential for real-world applicability and robust performance</li>
+<li>(Optional) Building upon the selected model, students will actively seek opportunities to enhance its performance. This may involve fine-tuning parameters, implementing innovative algorithms, or exploring novel techniques to optimize Traffic-Sign Detection and Recognition.</li>
+</ul>
+<h2 id="project-tasks-1">Project Tasks</h2>
+<h4 id="task-1">Task 1</h4>
+<p>Identify existing models, datasets, and benchmarking methodologies.
+Evaluate the strengths and weaknesses of different approaches.
+Choose a suitable deep neural network architecture for Traffic-Sign Detection.
+Justify the selection based on research findings and project requirements.</p>
+<h4 id="task-2">Task 2</h4>
+<p>Evaluate the trained model's performance using appropriate metrics such as accuracy, precision, recall, and F1 score.
+Test the model on real-world traffic sign images or video streams to assess its robustness and reliability.</p>
+<p><strong>Note: Please pay attention to safety when shooting videos!!</strong></p>
+<h4 id="task-3-optional">Task 3 (Optional)</h4>
+<p>Fine-tune the model to improve its performance on the chosen dataset such as hyperparameter tuning, loss functions, and regularization techniques.</p>
+<h3 id="materials">Materials</h3>
+<h4 id="paper-reading-1">Paper reading:</h4>
+<table>
+  <colgroup>
+    <col style="border: 1px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Paper</th>
+    <th>Recommended Codebase</th>
+  </tr>
+  <tr>
+    <td>Zhang, J., Huang, M., Jin, X., & Li, X. (2017). A real-time chinese traffic sign detection algorithm based on modified YOLOv2. Algorithms, 10(4), 127.</td>
+  </tr>
+  <tr>
+    <td>Tabernik, D., & Skočaj, D. (2019). Deep learning for large- scale traffic-sign detection and recognition. IEEE transactions on intelligent transportation systems, 21(4), 1427-1440.</td>
+    <td><a href="https://github.com/skokec/detectron-traffic-signs">https://github.com/skokec/detectron-traffic-signs</a></td>
+  </tr>
+  <tr>
+    <td>Arcos-Garcia, A., Alvarez-Garcia, J. A., & Soria-Morillo, L. M. (2018). Evaluation of deep neural networks for traffic sign detection systems. Neurocomputing, 316, 332-344.</td>
+    <td><a href="https://github.com/aarcosg/traffic-sign-detection">https://github.com/aarcosg/traffic-sign-detection</a></td>
+  </tr>
+  <tr>
+    <td>Liu, Z., Li, D., Ge, S. S., & Tian, F. (2020). Small traffic sign detection from large image. Applied Intelligence, 50(1), 1-13.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Zhu, Z., Liang, D., Zhang, S., Huang, X., Li, B., & Hu, S. (2016). Traffic-sign detection and classification in the wild. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 2110-2118).</td>
+    <td><a href="https://cg.cs.tsinghua.edu.cn/traffic-sign">https://cg.cs.tsinghua.edu.cn/traffic-sign</a></td>
+  </tr>
+  <tr>
+    <td>Arcos-García, Á., Alvarez-Garcia, J. A., & Soria-Morillo, L. M. (2018). Deep neural network for traffic sign recognition systems: An analysis of spatial transformers and stochastic optimisation methods. Neural Networks, 99, 158-165.</td>
+    <td><a href="https://github.com/aarcosg/tsr-torch">https://github.com/aarcosg/tsr-torch</a></td>
+  </tr>
+  <tr>
+    <td>Sanyal, B., Mohapatra, R. K., & Dash, R. (2020, January). Traffic sign recognition: A survey. In 2020 International Conference on Artificial Intelligence and Signal Processing (AISP) (pp. 1-6). IEEE.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Bochkovskiy, A., Wang, C. Y., & Liao, H. Y. M. (2020). Yolov4: Optimal speed and accuracy of object detection. arXiv preprint arXiv:2004.10934.</td>
+    <td><a href="https://github.com/Tianxiaomo/pytorch-YOLOv4">https://github.com/Tianxiaomo/pytorch-YOLOv4</a></td>
+  </tr>
+</table>
+<h4 id="datasets">Datasets:</h4>
+<ul>
+<li>
+<p><a href="https://cg.cs.tsinghua.edu.cn/traffic-sign/">Tsinghua-Tencent 100K Annotations 2021</a></p>
+</li>
+<li>
+<p><a href="http://www.nlpr.ia.ac.cn/pal/trafficdata/recognition.html">Chinese Traffic Sign Database</a></p>
+</li>
+<li>
+<p><a href="https://benchmark.ini.rub.de/index.html">German Traffic Sign Recognition/Detection Benchmark</a></p>
+</li>
+</ul>
+<h4 id="others-1">Others:</h4>
+<p>MMDetection. <a href="https://github.com/open-mmlab/mmdetection">https://github.com/open-mmlab/mmdetection</a></p>
+<p>Awesome object detection. <a href="https://github.com/amusi/awesome-object-detection">https://github.com/amusi/awesome-object-detection</a></p>
+<h2 id="5-lane-detection">5. Lane Detection</h2>
+<h3 id="project-background-2">Project Background</h3>
+<p>Lane detection is a pivotal technology in autonomous driving field, essential for enabling vehicles to navigate safely on roads. By utilizing cameras and other sensors, autonomous vehicles can identify and track lane markings.</p>
+<p>Lane detection systems have become increasingly robust, capable of handling diverse environmental conditions. As the autonomous driving industry continues to grow, lane detection remains a preliminary component in the development of self-driving vehicles, enhancing road safety and promoting the realization of autonomous transportation.</p>
+<p>Some example of Lane Detection:<br>
+<a href="https://www.youtube.com/watch?v=IzvlqCEYjg4">
+<img src="file:///c:\Users\wangd\Desktop\proj\img\lane-detect.jpg"/>
+</a></p>
+<h3 id="project-description-3">Project Description</h3>
+<p>Lane Detection is the fundamental technique of autonomous driving. This project aims to train your own deep neural network and perform it on real world scenarios. For this goal, students should firstly do some research on currently launched models, knowing basic principle, strength and shortage of each model. Then choose one model and realize it in code. It would be better to try to make some improvement on existing models on certain dataset with your team members.</p>
+<h3 id="project-objectives-3">Project Objectives</h3>
+<ul>
+<li>Realize a Lane Detection model that can be applied in real-world scenarios.</li>
+<li>(Optional) Make some improvement (e.g. F1 Score, Precision, Recall Rate, FPS, ...) on certain model.</li>
+</ul>
+<h3 id="project-tasks-2">Project Tasks</h3>
+<h4 id="task-1-1">Task 1</h4>
+<p>Reading papers below and do some research on-line to determine a model that your team are going to realize.</p>
+<h4 id="task-2-1">Task 2</h4>
+<p>Applying your model to a real world scenarios. You should take a video of the lanes in SUSTech, and perform you model on it.</p>
+<p><strong>Note: Please pay attention to safety when shooting videos!!</strong></p>
+<h4 id="task-3-optional-1">Task 3 (Optional)</h4>
+<p>Make some improvement (e.g. F1 Score, Precision, Recall Rate, FPS, ...) on the model you realized, and explain how you reach it in the final report.</p>
+<h3 id="materials-1">Materials</h3>
+<h4 id="paper-reading-2">Paper reading:</h4>
+<ul>
+<li>Tang, J., Li, S., &amp; Liu, P. (2021). A review of lane detection methods based on deep learning. Pattern Recognition, 111, 107623.</li>
+<li>Pan, X., Shi, J., Luo, P., Wang, X., &amp; Tang, X. (2018, April). Spatial as deep: Spatial cnn for traffic scene understanding. In Thirty-Second AAAI Conference on Artificial Intelligence. (Code: <a href="https://github.com/XingangPan/SCNN">XingangPan/SCNN: Spatial CNN for traffic lane detection (AAAI2018) (github.com)</a>)</li>
+<li>Neven, D., De Brabandere, B., Georgoulis, S., Proesmans, M., &amp; Van Gool, L. (2018, June). Towards end-to-end lane detection: an instance segmentation approach. In 2018 IEEE intelligent vehicles symposium (IV) (pp. 286-291). IEEE. (Code: <a href="https://github.com/MaybeShewill-CV/lanenet-lane-detection">MaybeShewill-CV/lanenet-lane-detection: Unofficial implemention of lanenet model for real time lane detection (github.com)</a>)</li>
+<li>Hou, Y., Ma, Z., Liu, C., &amp; Loy, C. C. (2019). Learning lightweight lane detection cnns by self attention distillation. In Proceedings of the IEEE/CVF  international conference on computer vision (pp. 1013-1021). (Code: <a href="https://github.com/cardwing/Codes-for-Lane-Detection">cardwing/Codes-for-Lane-Detection: Learning Lightweight Lane Detection CNNs by Self Attention Distillation (ICCV 2019) (github.com)</a>)</li>
+<li>Xu, H., Wang, S., Cai, X., Zhang, W., Liang, X., &amp; Li, Z. (2020). Curvelane-nas: Unifying lane-sensitive architecture search and adaptive point blending. In Computer Vision-ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XV 16 (pp. 689-704). Springer International Publishing. (Code: <a href="https://github.com/huawei-noah/vega">huawei-noah/vega: AutoML tools chain (github.com)</a>)</li>
+<li>Qin, Z., Wang, H., &amp; Li, X. (2020). Ultra fast structure-aware deep lane detection. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXIV 16 (pp. 276-291). Springer International Publishing. (Code: <a href="https://github.com/cfzd/Ultra-Fast-Lane-Detection">cfzd/Ultra-Fast-Lane-Detection: Ultra Fast Structure-aware Deep Lane Detection (ECCV 2020) (github.com)</a>)</li>
+<li>Tabelini, L., Berriel, R., Paixao, T. M., Badue, C., De Souza, A. F., &amp; Oliveira-Santos, T. (2021). Keep your eyes on the lane: Real-time attention-guided lane detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 294-302). (Code: <a href="https://github.com/lucastabelini/LaneATT">lucastabelini/LaneATT: Code for the paper entitled &quot;Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection&quot; (CVPR 2021) (github.com)</a>)</li>
+</ul>
+<h4 id="datasets-1">Datasets:</h4>
+<ul>
+<li>
+<p><a href="https://xingangpan.github.io/projects/CULane.html">CULane Dataset</a></p>
+</li>
+<li>
+<p><a href="https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection">TuSimple</a></p>
+</li>
+<li>
+<p><a href="https://github.com/SoulmateB/CurveLanes">CurveLanes Dataset</a></p>
+</li>
+</ul>
+<h4 id="others-2">Others:</h4>
+<p>MMDetection. <a href="https://github.com/open-mmlab/mmdetection">https://github.com/open-mmlab/mmdetection</a><br>
+Awesome object detection. <a href="https://github.com/amusi/awesome-object-detection">https://github.com/amusi/awesome-object-detection</a><br>
+Awesome lane detection. <a href="https://github.com/amusi/awesome-lane-detection">https://github.com/amusi/awesome-lane-detection</a></p>
+<h2 id="6-vehicle-road-cooperative">6. Vehicle road cooperative</h2>
+<h3 id="project-background-3">Project Background</h3>
+<p>Recent existing autonomous driving research mainly concentrate on single-vehicle intelligence. There still exist big gap to simulate the vehicle-road cooperation in autonomous driving areas. By exchange perceived information between roadside infrastructures and vehicles can not only enlarge each vehicle’s sensing range but also overcome some inherited drawbacks of single vehicles.</p>
+<h3 id="project-description-4">Project description</h3>
+<p>Vehicle road cooperative driving system is a cutting edge direction in autonomous driving (AV) research. This project aims to achieve an cooperative perception system along with experimental validation. For this goal, students should firstly exploit Carla simulator to simulate the densely populated urban driving environment. Then, by employing rich digital assets in Carla to collect raw data (like 3D point cloud, 2D image, GPS etc.) from roadside infrastructures and vehicles. Those data are subsequently exchange through nearby agent to perform cooperative perception. To this end, each vehicle can enlarge their sensing range and increase perception accuracy.</p>
+<h3 id="project-objectives-4">Project objectives</h3>
+<p>Simulate a road vehicle cooperative system, in which roadside infrastructure and vehicles shares their perceived information to improve the sensing range and increase object detection’s accuracy.</p>
+<h3 id="methodology-1">Methodology</h3>
+<ol>
+<li>Simulate real-world vehicle dynamic and traffic flow in Carla</li>
+<li>Attach various sensors (LiDAR, camera, etc.) on vehicles and roadside infrastructures and distributedly collect sensing information from different angle of view in the same scene by vehicles and roadside infrustructures.</li>
+<li>Perform 3D object detection and output the tested bounding box of each agent.</li>
+<li>Exchange and fuse perceived information to achieve cooperative perception.</li>
+</ol>
+<h3 id="prepare-the-development-env-intro">Prepare the development env intro</h3>
+<ol>
+<li>Install python + vscode</li>
+<li>Install Carla simulator</li>
+</ol>
+<ul>
+<li><a href="https://carla.readthedocs.io/en/latest/">https://carla.readthedocs.io/en/latest/</a></li>
+</ul>
+<ol start="3">
+<li>Install essential libraries for Machine Learning in Python</li>
+</ol>
+<ul>
+<li><strong>Numpy</strong>, a package with support for mathematical operations on multidimensional data—was the most imported package, used in nearly three-quarters of machine learning and data science projects. (<a href="https://numpy.org/">https://numpy.org/</a>)</li>
+<li><strong>pandas</strong>, a very popular library,it can easily fetch data from different sources like SQL databases, CSV, Excel, JSON files and manipulate the data to perform operations on it. (<a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>)</li>
+<li><strong>matplotlib</strong>, a visualization library. (<a href="https://matplotlib.org/">https://matplotlib.org/</a>)</li>
+<li><strong>CUDA &amp; CuDNN</strong>, CUDA Toolkit provides a development environment for creating high performance GPU-accelerated applications. With the CUDA Toolkit, you can develop, optimize,
+and deploy your applications on GPU-accelerated embedded systems</li>
+<li><strong>Pytorch</strong>, PyTorch is an optimized tensor library for deep learning using GPUs and CPUs. (<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>)</li>
+</ul>
+<h3 id="project-tasks-3">Project tasks</h3>
+<h4 id="task1">Task1:</h4>
+<p>Generation of annotated self-driving datasets with the CARLA simulator (3D point cloud dataset)</p>
+<p>(Using actors like vehicle, walker, traffic light that attached with LIDAR in Carla simulator to collect point cloud data of same scene from different view).</p>
+<h4 id="task-2-2">Task 2:</h4>
+<p>Applying cutting-edge 3D object detection model to detection the dynamic objects.</p>
+<ul>
+<li>Converting Carla data format into KITTI data format</li>
+<li>Take advantage of PCDet (<a href="https://github.com/open-mmlab/OpenPCDet.git">https://github.com/open-mmlab/OpenPCDet.git</a>) to achieve 3D object detection</li>
+</ul>
+<h4 id="task3">Task3:</h4>
+<p>Fusing dynamic map from sensors of roadside and vehicles in object-level to improve sensing accuracy.</p>
+<h3 id="materials-2">Materials</h3>
+<h4 id="paper-reading-3">Paper reading:</h4>
+<ul>
+<li>CARLA: An Open Urban Driving Simulator [A. Dosovitskiy <a href="http://et.al">et.al</a> 2017]</li>
+<li>Point-cloud based 3D object detection and classification methods for self-driving applications: A survey and taxonomy [D. Fernandes <a href="http://et.al">et.al</a> 2021]</li>
+<li>Review: deep learning on 3D point clouds [S. A. Bello <a href="http://et.al">et.al</a> 2020]</li>
+<li>LiDAR-based Online 3D Video Object Detection with Graph-based Message Passing and Spatiotemporal Transformer Attention [J. Yin <a href="http://et.al">et.al</a> 2020]</li>
+<li>Distributed Dynamic Map Fusion via Federated Learning for Intelligent Networked Vehicles[Z. Zhang <a href="http://et.al">et.al</a> 2020]</li>
+<li>Cooperative Perception for 3D Object Detection in Driving Scenarios Using Infrastructure Sensors [E. Arnold <a href="http://et.al">et.al</a> 2020]</li>
+<li>V2VNet: Vehicle-to-Vehicle Communication for Joint Perception and Prediction [T. Wang <a href="http://et.al">et.al</a> 2020]</li>
+<li>Object-level Perception Sharing Among Connected Vehicles [M. Ambrosin <a href="http://et.al">et.al</a> 2019]</li>
+<li>nuScenes: A multimodal dataset for autonomous driving [H. Caesar <a href="http://et.al">et.al</a> 2019]</li>
+<li>Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite [A. Geiger <a href="http://et.al">et.al</a> 2012]</li>
+</ul>
+<h4 id="github">Github:</h4>
+<ul>
+<li><a href="https://github.com/carla-simulator/carla.git">https://github.com/carla-simulator/carla.git</a></li>
+<li><a href="https://github.com/DerrickXuNu/Learn-Carla.git">https://github.com/DerrickXuNu/Learn-Carla.git</a></li>
+<li><a href="https://github.com/open-mmlab/OpenPCDet.git">https://github.com/open-mmlab/OpenPCDet.git</a></li>
+<li><a href="https://github.com/zijianzhang/CARLA_INVS.gitTextbook:">https://github.com/zijianzhang/CARLA_INVS.gitTextbook:</a></li>
+<li><a href="https://github.com/ucla-mobility/OpenCDA.git">https://github.com/ucla-mobility/OpenCDA.git</a></li>
+</ul>
+<h4 id="others-3">Others:</h4>
+<ul>
+<li><a href="https://carla.readthedocs.io/en/latest/">https://carla.readthedocs.io/en/latest/</a></li>
+<li><a href="https://opencda-documentation.readthedocs.io/en/latest/index.html">https://opencda-documentation.readthedocs.io/en/latest/index.html</a></li>
+<li><a href="http://www.open3d.org/docs/release/python_api/open3d.geometry.get_rotation_matrix_from_xyz.html">http://www.open3d.org/docs/release/python_api/open3d.geometry.get_rotation_matrix_from_xyz.html</a></li>
+</ul>
+<h2 id="7-rl-based-motion-planning-for-robot">7. RL-based Motion Planning for Robot</h2>
+<h3 id="project-background-4">Project Background</h3>
+<p>In the context of Reinforcement Learning-based Motion Planning for Autonomous Driving, vehicles have the ability to gather data through real-time interactions with their surroundings. This data is subsequently harnessed to train intelligent agents, enabling them to make more informed decisions and formulate action plans that align with various tasks and safety mandates. The promise of this approach lies in its potential to enhance the efficacy of autonomous driving systems, enhance traffic flow, mitigate accident risks, alleviate congestion, and advance intelligent, sustainable urban mobility.</p>
+<h3 id="project-description-5">Project description</h3>
+<p>RL-based planning methods typically demonstrate strong performance in controlled training environments but encounter a range of challenges when transitioning to more realistic settings, such as CARLA and Gazebo. This project is designed to investigate the complexities associated with deploying reinforcement learning-based planning methods in real-world environments. Key areas of focus include the refinement of planning algorithm inputs and outputs, enhancements to training environments, and the management of environmental constraints.</p>
+<p>This project can be executed using two simulation platforms: Gazebo and CARLA. Gazebo, which necessitates the use of ROS, offers a simpler environment with a wide array of wheeled robot models for deployment. In contrast, CARLA employs Ackermann-modeled carts as the objects to be controlled, presenting a more challenging control scenario but eliminating the requirement for ROS integration.</p>
+<h3 id="project-objectives-5">Project objectives</h3>
+<ol>
+<li>
+<p>To facilitate students in achieving a more profound comprehension of the practical implementation of reinforcement learning within the domain of autonomous driving.</p>
+</li>
+<li>
+<p>To help students recognize that the effectiveness of reinforcement learning-based trajectory planning methods significantly differs based on distinct driving models and environmental conditions, a focal point in contemporary research.</p>
+</li>
+</ol>
+<h3 id="methodology-2">Methodology</h3>
+<ol>
+<li>Train a RL-based planner in GYM.</li>
+<li>Consider the gap between GYM and more realistic simulator such as CARLA, GAZEBO  and etc, students need modify the RL-based planner to make the planner work in CARLA or GAZEBO.</li>
+<li>Students can also train a policy with those simulators.</li>
+</ol>
+<h3 id="prepare-the-development-env-intro-1">Prepare the development env intro</h3>
+<ol>
+<li>Install a simulator
+<ol>
+<li>CARLA: please refer &quot;CARLA Simulator&quot;</li>
+<li>GAZEBO:
+<ol>
+<li>Install ROS</li>
+<li>Install GAZEBO, please refer <a href="https://gazebosim.org/docs/harmonic/install_ubuntu">https://gazebosim.org/docs/harmonic/install_ubuntu</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="project-tasks-just-need-to-complete-a-task">Project Tasks (just need to complete a task)</h3>
+<p>**Topic 1: RL-based motion planning for autonomous driving in CARLA</p>
+<ol>
+<li>You need find a RL-based motion planning method.</li>
+<li>Train the policy network and deploy the policy into a vehicle planning stacks.</li>
+<li>Modify the output of policy network to meet the need of Arckman Model(this step isn't necessary if the output already matched).</li>
+<li>Compare with other RL-based methods and traditional methods(optional).</li>
+</ol>
+<p>**Topic 2: RL-based motion planning in GAZEBO</p>
+<ol>
+<li>You need to find a RL-based motion planning method.</li>
+<li>You need to know some about ROS.</li>
+<li>Train the policy network and deploy the policy into a robot planning stacks.</li>
+<li>Compare with other RL-based methods and traditional methods(optional).</li>
+</ol>
+<h3 id="references">References</h3>
+<h4 id="rl-based-planning-method">RL-based planning method</h4>
+<ul>
+<li>
+<p><a href="https://songyanho.github.io/Reinforcement-Learning-for-Self-Driving-Cars/">https://songyanho.github.io/Reinforcement-Learning-for-Self-Driving-Cars/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/MLJejuCamp2017/DRL_based_SelfDrivingCarControl">https://github.com/MLJejuCamp2017/DRL_based_SelfDrivingCarControl</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vita-epfl/CrowdNav">https://github.com/vita-epfl/CrowdNav</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vita-epfl/social-nce">https://github.com/vita-epfl/social-nce</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ChanganVR/RelationalGraphLearning">https://github.com/ChanganVR/RelationalGraphLearning</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hanruihua/rl_rvo_nav">https://github.com/hanruihua/rl_rvo_nav</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hanruihua/rvo_ros">https://github.com/hanruihua/rvo_ros</a></p>
+</li>
+</ul>
+<h3 id="driving-model">Driving model</h3>
+<ul>
+<li>
+<p><a href="https://www.guyuehome.com/35485">https://www.guyuehome.com/35485</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_46067306/article/details/125675193">https://blog.csdn.net/qq_46067306/article/details/125675193</a></p>
+</li>
+</ul>
+<h3 id="ros-tutorials">ROS Tutorials</h3>
+<ul>
+<li><a href="http://wiki.ros.org/ROS/Tutorials">http://wiki.ros.org/ROS/Tutorials</a></li>
+<li><a href="https://carla.readthedocs.io/projects/ros-bridge/en/latest/">https://carla.readthedocs.io/projects/ros-bridge/en/latest/</a></li>
+</ul>
+<h2 id="8-semantic-segmentation">8. Semantic Segmentation</h2>
+<p><code>Author: Bofang Zheng Date: 2023/09/25</code></p>
+<h3 id="background">Background</h3>
+<p>Semantic segmentation has always been an exciting area in machine learning. This application-oriented study plays a crucial part in many scenarios like autonomous driving, medical image analysis etc. Over the last decade, the advance in convolutional neural networks and transformers has brought it closer to the reality than ever before.</p>
+<p>Its goal, in a nutshell, is to classify each pixel in an image into a specific object category or class. An example in the area of autonomous driving is shown as follow: a video frame of landscape may be captured by the vehicle's camera, the prediction output of a semantic segmentation algorithm decides for each pixel whether it belongs to the road, other vehicles, sky or pedestrians etc.</p>
+<img src="file:///c:\Users\wangd\Desktop\proj\img\zuerich00.png" alt="Cityscapes Dataset: Example Zurich" />
+<p align="center">Cityscapes Dataset: Example Zurich.</p>
+<h3 id="project-description-6">Project Description</h3>
+<p>In this project, we're to go through some basics in convolutional neural networks(CNN) and transformers, both of which are popular architectures for tackling semantic segmentation tasks. Then, we will provide you with a dataset in autonomous driving, you can use (or build) an architecture of your choice to delve into the dataset, train your own model and (if you have time) strive for higher benchmarks.</p>
+<p>Note: A <strong>pre-trained</strong> model is generally not allowed, if low budget on GPUs or time is unavoidable, you should <strong>at least</strong> finetune your model to go through training stage yourself.</p>
+<h3 id="project-objectives-6">Project Objectives</h3>
+<p>Learn the basic mathematics behind CNN and attention. Get your hands dirty with deploying state-of-the-art models on semantic segmentation tasks. Explore the model training process and optionally play with your architecture to improve performance.</p>
+<h3 id="tasks-1">Tasks</h3>
+<h4 id="task-0-cnns-and-attention-optional">Task 0: CNNs and Attention (Optional)</h4>
+<p>It is highly suggested that you go through this part if you are not previously familiar with attentions and CNNs.</p>
+<p>Since most practices and theories of semantic segmentation may have not been taught in class, we're here to equip you with basic knowledge to understand the papers. However, this part still assume you have the necessary knowledge to get to this step (like linear algebra). If you still find yourself struggling with those equations, please do not hesitate to ask your TAs for help. You may also proceed without fully understanding.</p>
+<ul>
+<li>CNNs:</li>
+</ul>
+<p><a href="https://inst.eecs.berkeley.edu/~cs182/sp23/assets/notes_new/lec8.pdf">Conv-net basics - lecture notes from UC Berkeley</a></p>
+<ul>
+<li>Attention:</li>
+</ul>
+<p><a href="https://inst.eecs.berkeley.edu/~cs182/sp23/assets/notes_new/lec14.pdf">RNNs and Attention - lecture notes from UC Berkeley</a></p>
+<p>​<a href="https://web.stanford.edu/class/cs224n/readings/cs224n-self-attention-transformers-2023_draft.pdf">Self-attention and Transformers - Stanford University</a></p>
+<h4 id="task-1-the-dataset">Task 1: The Dataset</h4>
+<p><strong>In this part, you should</strong> download <a href="https://www.cityscapes-dataset.com/">the cityscapes dataset</a>. After registration, you should find that there are many datasets for downloading, a preferred option would be to download the first two datasets: gtFine and gtCoarse. You can also use other provided data in the webpage. Your selection should be a trade-off from your available time and computational resource and the performance of your model.</p>
+<img src="file:///c:\Users\wangd\Desktop\proj\img\cityscape.png" alt="cityscape"/>
+<p align="center"> The go-to option for your dataset constrution, if you are extremely limited in computational power, try not to have fewer than gtFine. </p>
+<p><em>Note that your grades do not heavily depend on the 1% improvement of your model, hence building an enormous the dataset should not be your primary focus.</em></p>
+<h4 id="task-2-model-development">Task 2: Model Development</h4>
+<p>Whether you are new to machine learning or an experienced researcher who has many publications, it is always suggested that you start from a working code, then gradually modify it to build your own model. Here we have a list of choices from the most basic FCN model to state-of-the-art segment anything. You can also choose others or build up your own, but <strong>remember to go through 1. in</strong> <strong>Materials</strong> to evaluate your available resources first.</p>
+<ol>
+<li>
+<p><a href="https://arxiv.org/abs/1411.4038">Fully Convolutional Networks for Semantic Segmentation</a></p>
+<p>The milestone work to first bring CNNs to semantic segmentation. It proposes many important ideas that are still widely adopted today when designing NN architectures such as end-to-end learning, skip connections, upsampling etc. It is the go-to option if you are a beginner in machine learning</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1802.02611">Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (DeepLabv3+)</a></p>
+<p>DeepLab was a state-of-art deep learning model for semantic image segmentation developed by google. DeepLabv3+ builds on DeepLabv3 by adding a simple yet effective decoder module to enhance segmentation results. The project put forward many great ideas such as atrous convolution, atrous spatial pyramid pooling etc.</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1505.04597">U-Net: Convolutional Networks for Biomedical Image Segmentation</a></p>
+<p>U-Net is a popular architecture for semantic segmentation. The down/up-sampling technique became an important design idea and later was adopted by AIGC as well. Although initially designed for biomedical applications, its powerful performance goes beyond.</p>
+<p>Some popular variants:</p>
+<p><a href="https://arxiv.org/abs/1807.10165">Unet++</a>: Nested architecture</p>
+<p><a href="https://arxiv.org/abs/2102.04306">TransUnet</a>: Replace convolution with transformer blocks</p>
+<p><a href="https://arxiv.org/abs/2203.04967">UNeXt</a>: Replace with MLP blocks</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2012.15840">Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers</a></p>
+<p>This paper deploys a pure transformer to encode an image as a sequence of patches, termed SEgmentation TRansformer (SETR), and shows that SETR achieves new state of the art on ADE20K, Pascal Context, and competitive results on Cityscapes. You may want to study the original <a href="https://arxiv.org/abs/2010.11929">ViT</a>, which first applies transformers to computer vision task, namely classification, to understand techniques like image patching.</p>
+<p>Other transformer-based models:</p>
+<p><a href="https://arxiv.org/abs/2105.15203">SegFormer</a>: Improved version of SETR, with a hierarchical Transformer encoder and a lightweight all-MLP decode head.</p>
+<p><a href="https://arxiv.org/abs/2205.08534">ViT-adapter</a>: Ranked 19th on the cityscape leaderboard. <a href="https://zhuanlan.zhihu.com/p/608272954">Here's a Chinese blog</a>.</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2304.02643">Segment Anything Model (not suggested)</a></p>
+<p>The Chat-GPT for semantic segmentation. Although not really applicable to our project since it's very computationally expensive to train, it is fun to try with its demos if you are particularly interested in big models and artificial general intelligence. Attempts to run and fine-tune this model are welcome.</p>
+</li>
+</ol>
+<p><strong>In this part, you should</strong> <strong>0.</strong> Choose one model and estimate its memory consumption. <strong>1.</strong> Read the paper to have a grasp on the design motivation and why it works. <strong>2.</strong> Download the source code and setup the environment. <strong>3.</strong> Arrange the cityscapes dataset as the required format depending on your data-loading code. <strong>4.</strong> Train your model and evaluate test performance.</p>
+<h4 id="task-3-guides-for-better-performance-optional">Task 3: Guides for Better Performance (Optional)</h4>
+<ol>
+<li>
+<p>Contrastive Learning: <a href="https://arxiv.org/abs/2004.11362">Supervised contrastive learning</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2301.11320">CutLER: Cut and Learn for Unsupervised Object Detection and Instance Segmentation</a></p>
+</li>
+</ol>
+<h3 id="materials-3">Materials</h3>
+<ol>
+<li>Due to the poor public computational resources, it is understandable that you may find your model poorly trained, takes forever to train, or simply does not fit into memory, and eventually result in bad performance, project grades and even mood. We do not want that to happen. Therefore it is <strong>highly suggested</strong> that you evaluate the available computational resources, and then calculate the total memory your model is to take up. In the case that it does not fit into your laptop or server, here are some free online resources for academic or educational purpose:</li>
+</ol>
+<ul>
+<li><a href="https://colab.research.google.com/">Colab</a>: <a href="https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d">Guide</a></li>
+<li><a href="https://tianchi.aliyun.com/">Ali TIANCHI</a>: <a href="https://zhuanlan.zhihu.com/p/572323440">Zhihu</a></li>
+<li><a href="https://www.kaggle.com/code">Kaggle:</a> <a href="https://www.kaggle.com/code/dansbecker/running-kaggle-kernels-with-a-gpu/notebook">Tutorials</a></li>
+<li><a href="https://www.autodl.com/home">AutoDL</a></li>
+<li><a href="https://console.paperspace.com/gradient/projects">Paperspace</a></li>
+</ul>
+<ol start="2">
+<li>How to compute your model memory?
+<ol>
+<li><a href="https://cs231n.github.io/convolutional-networks/#computational-considerations">Note by Andrej Karphaty</a></li>
+<li>Reference to size of model checkpoints from the repository. Note that this is the size of model parameters, the memory consumption is higher since data need to be loaded.</li>
+</ol>
+</li>
+</ol>
+<h4 id="further-readings"><strong>Further Readings:</strong></h4>
+<p>If you want to finetune your model, here're some enlightening theories and methods to read, which covers both computer vision and natural language processing areas:</p>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/1606.09282">Learning without Forgetting</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2106.09685">LoRA</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1902.00751.pdf">Adapter</a></p>
+</li>
+</ul>
+<p>PyTorch tutorials:</p>
+<p><a href="https://stanford.edu/class/cs224n/materials/CS224N_PyTorch_Tutorial.html">CS224N_PyTorch_Tutorial (stanford.edu)</a></p>
+<p>Deep learning tuning playbook by Google:</p>
+<p><a href="https://github.com/google-research/tuning_playbook">A playbook for systematically maximizing the performance of deep learning models</a></p>
+<h5 id="credits"><strong>Credits:</strong></h5>
+<p><a href="http://chat.openai.com">chat.openai.com</a></p>
+<p>Machine learning final project guideline (2022 Fall Version), Prof. Qi Hao, Yanhong Jia, SUSTech</p>
+<p>Advanced natural language processing Fall 2023, Prof. Guanhua Chen, SUSTech</p>
+<p><a href="https://ai.meta.com/blog/segment-anything-foundation-model-image-segmentation/">Introducing Segment Anything: Working toward the first foundation model for image segmentation (meta.com)</a></p>
+<p>[<a href="https://www.semanticscholar.org/paper/Rethinking-Semantic-Segmentation-from-a-Perspective-Zheng-Lu/d29430adccb805ab57b349afa8553954347b3197">PDF] Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers | Semantic Scholar</a></p>
+<p><a href="">Deeplabv3+ Hasty.ai</a></p>
+<p>All papers, codes and tutorials mentioned. Shout-out to open-source.</p>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>
