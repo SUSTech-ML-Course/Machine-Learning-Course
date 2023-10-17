@@ -6,7 +6,7 @@
 
 Please write up your responses to the following problems clearly and concisely. We require you to write up your responses with A4 paper. You are allowed and encouraged to work together. You may discuss the homework to understand the problem and reach a solution in groups. *However, each student must write down the solution independently.* You must understand the solution well enough in order to reconstruct it by yourself. (This is for your own benefit: you have to take the exams alone.)
 
-- ***Written Homeworks.*** All calculation problems MUST be written on single-sided A4 paper. You should bring and hand in it before class on the day of the deadline. Submitting the scan or photo version on Sakai will **NOT** be accepted.
+- ***Written Homeworks.*** All calculation problems MUST be written on a pdf document or a word document to bb. Submitting the scan or photo version will **NOT** be accepted.
 
 - ***Coding Homeworks.*** On online judge. Will be released soon.
 
