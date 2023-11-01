@@ -6,7 +6,7 @@
 
 If your computer has a GPU, please visit the [PyTorch site](https://pytorch.org/get-started/locally/) to check which version of CUDA is required for the version of pytorch you want to install and make sure that your graphics card driver supports this version of CUDA. If not, update the graphics card driver.
 
-![image-20221015232937488](images\image-20221015232937488.png)
+![image-20221015232937488](images/image-20221015232937488.png)
 
 As we can see,  **pytorch 1.12 requires CUDA 11.3**
 
@@ -14,17 +14,17 @@ As we can see,  **pytorch 1.12 requires CUDA 11.3**
 
 - #### Open NVIDA Control Panel
 
-![image-20221015230756488](images\image-20221015230756488.png)
+![image-20221015230756488](images/image-20221015230756488.png)
 
 - #### Check the NIVIDA driver information
 
-![image-20221015225230284](images\image-20221015225230284.png)
+![image-20221015225230284](images/image-20221015225230284.png)
 
 - #### NIVIDA driver version
 
 ![image-20221015231110460](images/image-20221015231110460.png)
 
-![image-20221015231235431](images\image-20221015231235431.png)
+![image-20221015231235431](images/image-20221015231235431.png)
 
 Here we can see that the highest supported version of CUDA for the driver is 11.8.
 
@@ -32,7 +32,7 @@ Here we can see that the highest supported version of CUDA for the driver is 11.
 
 For more details  ,please visit this link: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 
-![image-20221015225157115](images\image-20221015225157115.png)
+![image-20221015225157115](images/image-20221015225157115.png)
 
 Here my computer's graphics card driver supports the version of pytorch-gpu we want to install. If yours does not, then please find a way to update your graphics card driver.
 
@@ -76,7 +76,7 @@ From the command line, type:
 python
 ```
 
-![image-20221015223508062](images\image-20221015223508062.png)
+![image-20221015223508062](images/image-20221015223508062.png)
 
 then enter the following code:
 
@@ -86,7 +86,7 @@ x = torch.rand(5, 3)
 print(x)
 ```
 
-![image-20221015223526821](images\image-20221015223526821.png)
+![image-20221015223526821](images/image-20221015223526821.png)
 
 Additionally, to check if your GPU driver and CUDA is enabled and accessible by PyTorch, run the following commands to return whether or not the CUDA driver is enabled:
 
@@ -95,13 +95,13 @@ import torch
 torch.cuda.is_available()
 ```
 
-![image-20221015224144036](images\image-20221015224144036.png)
+![image-20221015224144036](images/image-20221015224144036.png)
 
 ```
 torch.version.cuda
 ```
 
-![image-20221015224228694](images\image-20221015224228694.png)
+![image-20221015224228694](images/image-20221015224228694.png)
 
 ## 3. Next Steps
 
