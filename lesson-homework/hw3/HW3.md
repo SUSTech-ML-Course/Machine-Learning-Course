@@ -5,10 +5,10 @@
 ## Question 1
 
 Consider a data set in which each data point $t_n$ is associated with a weighting factor $r_n>0$, so that the sum-of-squares error function becomes 
-$$E_D (\mathbf{w}) = \frac{1}{2}\sum_{n=1}^Nr_n\{t_n-\mathbf{w^T}\phi(\mathbf{x}_n)\}^2.$$
+$$E_D (\mathbf{w}) = \frac{1}{2}\sum_{n=1}^Nr_n(t_n-\mathbf{w^T}\phi(\mathbf{x}_n))^2.$$
 Find an expression for the solution $\mathbf{w}^*$ that minimizes this error function. 
 
-Give two alternative interpretations of the weighted sum-of-squares error function in terms of (i) data dependent noise variance and (ii) replicated data points.
+Give two alternative interpretations of the weighted sum-of-squares error function in terms of (i) data independent noise variance and (ii) replicated data points.
 
 
 
