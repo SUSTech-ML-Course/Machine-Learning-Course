@@ -53,10 +53,7 @@ These packages are used to load data and extract features by HOG, you just need 
 
 ## Training datasets and test videos
 
-We provide training datasets and test videos . Please download the from the following link:
-
-> 链接：https://pan.baidu.com/s/1hNBQcwdkT4oqTjspGaabFA
-> 提取码：csml
+We provide training datasets and test videos.
 
 After downloading, unzip the samples.zip and videos.zip to the `Lab10.Assignment` folder.
 
