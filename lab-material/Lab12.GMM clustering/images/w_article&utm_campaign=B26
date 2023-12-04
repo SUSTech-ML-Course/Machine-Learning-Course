@@ -1,0 +1,1405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>  Data Science Blogathon - 26  </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
+<meta name="description" content="  Data Science Blogathon - 26  ">
+<meta name="author" content="">
+<meta property="og:url" content="https://datahack.analyticsvidhya.com/blogathon/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:description" content=" Data Science Blogathon - 26 | Assured Rewards + Total prizes worth INR 6 Lakh(≅USD 8000)" />
+<meta property="og:image" content=" https://datahack-prod.s3.ap-south-1.amazonaws.com/__sized__/og_image/OG-copy_3-thumbnail-600x600.png " />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+<meta name="keywords" content="" />
+
+<link rel="canonical" href="" id="canonicalLink" />
+<link rel='icon' id='favicon' type='image/x-icon' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+<link rel='apple-touch-icon' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+<link rel='apple-touch-icon' sizes='76x76' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+<link rel='apple-touch-icon' sizes='114x114' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+<link rel='apple-touch-icon' sizes='144x144' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha256-BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8=" crossorigin=anonymous>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/css/intlTelInput.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://automation.analyticsvidhya.com/static/css/stripBootstrap.css">
+<link rel="stylesheet" href="/static/CACHE/css/base.d713a2b76029.6ff002bc9a26.css" type="text/css"><link rel="stylesheet" href="/static/CACHE/css/rrssb.61a43e182636.47d0ad004466.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+      var a = window.location.href;
+      document.getElementById('canonicalLink').href=a
+    </script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MPSM42V');</script>
+</head>
+<body class=" pages  contest-playground ">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPSM42V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="black-rbga" style="display:none;"></div>
+<section id="avFlashSale" class="py-1 alert alert-warning alert-dismissible fade show m-0" style="display:none;" role="alert">
+<div class="container">
+<div class="row">
+<div class="av-sale-content w-100">
+<p></p>
+<a id="hrefId" class="btn btn-light ml-1"></a>
+<div id="clockdiv" style="display:none;">
+<span>
+<h4 class="days" id="day"></h4>
+<sup>D</sup>
+</span>
+<span>
+<h4 class="hours" id="hour"></h4>
+<sup>H</sup>
+</span>
+<span>
+<h4 class="minutes" id="minute"></h4>
+<sup>M</sup>
+</span>
+<span>
+<h4 class="seconds" id="second"></h4>
+<sup>S</sup>
+</span>
+</div>
+</div>
+<button type="button" class="close ml-auto py-1" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+</div>
+</section>
+<header>
+<nav class="navbar navbar-expand-lg bg-white">
+<div class="container">
+<a class="navbar-brand" href="/">
+<img loading='lazy' class="logo" src="https://av-public-assets.s3.ap-south-1.amazonaws.com/logos/av-logo-svg.svg" alt="Analytics Vidhya">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<i class="mobile-menu-iocn"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item mr-3">
+<a href="https://www.analyticsvidhya.com/blog/" class="nav-link">Blog</a>
+</li>
+<li class="nav-item mr-3">
+<a href="https://courses.analyticsvidhya.com/" class="nav-link">Courses</a>
+</li>
+<li class="nav-item mr-3">
+<a href="http://blackbelt.analyticsvidhya.com/plus?utm_source=datahack&utm_medium=Navbar&utm_campaign=BB" target="_blank" class="nav-link">BlackBelt</a>
+</li>
+<li class="nav-item mr-3">
+<a href="https://datahack.analyticsvidhya.com/jobathon/?utm_source=analyticsvidhya&utm_medium=datahack_navbar&utm_campaign=JOB-A-THON" class="nav-link">Job-A-Thon</a>
+</li>
+
+<li class="nav-item mr-3">
+<a href="/top-competitor" class="nav-link">User Rankings</a>
+</li>
+
+<li class="nav-item mr-2">
+<a href = /approach/top-approaches/ target="_blank" class="nav-link">Top Approaches</a>
+</li>
+</ul>
+<div class="form-inline my-2 my-lg-0">
+<ul class="nav">
+<li class="nav-item av-search-icon">
+<i class="fas fa-search" aria-hidden="true" id="sbtn-id"></i>
+</li>
+<li>
+<a class="btn text-white px-4 av-btn" href="/oidc/authenticate/?next=/blogathon/">Login/Register</a
+              >
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="av-modal-full-screen" id="searchlink">
+<button type='button' class='close' id="close" aria-label='Close'><span>esc</span></button>
+<div class="modalform">
+<div id="search">
+<input type="hidden" name="csrfmiddlewaretoken" value="BcUu3nldyhHp0rkJmwXU8etfeTdZbLuJqHwQUtM4rOWa98uqnXDwaFMHX4fDCmPD">
+<div class="form-group">
+<input type="text" class="form-control" autocomplete="off" id="search-contest-input-id" placeholder="Keyword">
+<button class="btn btn-default" id="sbtn"><i class="fas fa-search" aria-hidden="true"></i></button>
+<div id="search_contest_id"></div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+  
+  
+    
+    
+  
+
+  //old ga
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
+
+  // gtag('config', 'UA-67190105-1');
+
+</script>
+<script>
+$(document).ready(function() {
+  $.ajax({
+    url: "/notifications/api/unread_count/",
+    dataType: 'json',
+    type: "GET",
+    success: function(data) {
+      $('#notification_count').html(data.unread_count)
+    },
+    error: function(err) {
+      console.log(err)
+    }
+    });
+    console.log(window.location.pathname == "/notifications/unread/")
+    if(window.location.pathname == "/notifications/unread/") {
+      console.log("inside pathname")
+      ("/notifications/unread/");
+    }
+    
+  $("#search_contest_id p").remove();
+  var index = -1;
+   $('#search-contest-input-id').keydown(function(e) {
+    var pressed=false;
+    if($('#search-contest-input-id').val()==''){
+      index = -1;
+      $("#search_contest_id p").remove();
+      $(this).removeClass('focus-active');
+    }
+    if(event.keyCode==38){
+    // if up arrow key is pressed then decrease the index value.
+      index = index - 1;
+      if(index<0){
+        //if handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    else if(event.keyCode==40){
+      //if down arrow key is pressed then increase the index value.
+      index = index + 1
+
+      if(index > $('#search_contest_id p').length-1){
+        // it handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    if(pressed==true){
+      /* if any arrow key is pressed then set the value of
+        that p to the input box... focus is handelled by 'active-search' class
+      */
+      $('#search_contest_id p').removeClass('active-search')
+      $('#search_contest_id p').eq(index).addClass('active-search')
+      $('#search-contest-input-id').val($('#search_contest_id p').eq(index).text())
+    }
+    if(event.keyCode==9){
+      // if tab is pressed then close the dropdown
+      index = -1
+      $('#search_contest_id p').remove()
+      $('#search-contest-input-id').removeClass('focus-active');
+    }
+  });
+
+  $('#search-contest-input-id').keyup(function(event) {
+    /*when ever any key is pressed this event got fired*/
+    if($('#search-contest-input-id').val()==''){
+      //if the input tag is empty then remove the focus form it and do not open the suggestor
+      $("#search_contest_id p").remove();
+      $(this).removeClass('focus-active');
+    }
+    var contest_name = $(this).val();
+    // no ajax for space(32), backspace(8), delete, down-arrow,up-arrow, Enter
+    if(contest_name.length > 0 && event.keyCode != 40 && event.keyCode != 38 && event.keyCode != 32 && event.keyCode !=8 && event.keyCode!=13){
+      $.ajax({
+        type: "POST",
+        url: "/contest/searched-contest",
+        data: {'contest_name': contest_name, csrfmiddlewaretoken:$('#search input[name=csrfmiddlewaretoken]').val()},
+        success:function(response){
+          $("#search_contest_id").empty();
+          var len = response['contests'].length
+          if (len==0){
+            // if length is 0 then close the dropdown css
+            $('#search-contest-input-id').removeClass('focus-active');
+          }
+          else if(len!=0 && event.keyCode==8){
+            //if length not equal to 0 and backspace is pressed
+            $('#search-contest-input-id').addClass('focus-active');
+
+          }
+          else{
+            $('#search-contest-input-id').addClass('focus-active');
+            $('#search-contest-input-id').focus();
+            // $('#search_contest_id').css('width', '50%');
+
+
+          }
+          for (var i=0;i<response['contests'].length;i++){
+            $("<p>"+response['contests'][i]+"</p>").appendTo("#search_contest_id");
+          }
+          $("#search_contest_id p").bind("click",function(){
+            $("#search-contest-input-id").val($(this).text()).focus()
+            $("#search_contest_id").empty();
+            $('#search-contest-input-id').removeClass('focus-active');
+            $('#sbtn').click();
+          });
+        }
+      });
+    }
+    if(event.keyCode==13) {
+        $('#sbtn').click();
+      }
+  });
+  $("#sbtn").on("click", function(e){
+    var search = $("#search-contest-input-id").val();
+    var data = {'contest_name': search};
+    $.ajax({
+        type: "POST",
+        url: "/contest/contest-slug",
+        data: data,
+        success:function(response){
+          if (response['contest_slug']) {
+            var url_link = "/contest/"+response['contest_slug']+"/";
+            $("#search").attr("action",url_link);
+            window.location.href = url_link;
+          }
+          else {
+          console.log("Error no such contest found")
+          }
+        },
+        error:function(err){
+          console.log("error");
+        }
+    });
+  });
+  $('#sbtn-id').click(function(e) {
+    $("#searchlink").toggleClass('open');
+  });
+  $('#close').click(function(e) {
+    $("#searchlink").removeClass('open');
+  });
+
+
+});
+
+// Esc click to close form
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $("#searchlink").removeClass('open');
+  }
+});
+</script>
+<div class="workspace">
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#d43f3a;">
+<h4 class="modal-title" id="modal-header" style="color:white;">Error </h4>
+<button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p id="modal-body" style="color:black;"></p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="success_modal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#449d44;">
+<h4 class="modal-title" id="modal-header" style="color:white;">Success </h4>
+<button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p id="modal-body" style="color:black;">Payment Received.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="myModal1" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#449d44;">
+<h4 class="modal-title" id="modal-header1" style="color:white;">New Data Added</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p id="modal-body1" style="color:black;">Please check the data set. New Data has been added along with the previous one. New file name : Alcohol consumption.</p>
+</div>
+<div class="modal-footer">
+
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="warningModal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#449d44;">
+<h4 class="modal-title" id="warning-modal-header" style="color:white;">New Data Added</h4>
+<button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p id="warning-modal-body" style="color:black;">Please check the data set. New Data has been added along with the previous one. New file name : Alcohol consumption.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-success" id="slack_invite">Proceed</button>
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="myModal3" role="dialog" style="width:80%;margin-left:10%">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#449d44;">
+<h4 class="modal-title" id="modal-header" style="color:white;">Set Final Submissions</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body" style="height:400px;overflow-y : auto;width:100%">
+<p id="final_submission_set_success"></p>
+<form action="" method="post" id="form-submissions">
+<input type="hidden" name="csrfmiddlewaretoken" value="BcUu3nldyhHp0rkJmwXU8etfeTdZbLuJqHwQUtM4rOWa98uqnXDwaFMHX4fDCmPD">
+<table class="table table-striped" id="" style="padding-left:20px;width:100%;">
+<tr style="height:40px;">
+<th style="" class="col-sm-6">Answer Commit Message</th>
+<th style="" class="col-sm-2">Score</th>
+<th style="" class="col-sm-4">Time of Submission</th>
+<th style="padding-right:15px;">Select</th>
+</tr>
+</table>
+<table class="table-striped" id="data" style="padding-left:20px;width:100%;">
+</table>
+<table id="final_1">
+<tr>
+<td>
+<button type="button" class="btn btn-primary col-sm-6 col-sm-offset-3" style="margin-top:30px;" id="submit">Set final Submission</button>
+</td>
+</tr>
+</table>
+<table id="final_2">
+<tr>
+<td>
+<button type="button" class="btn btn-primary col-sm-6 col-sm-offset-3" style="margin-top:30px;" id="submit_2">Set Submissions to check private score</button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="similarcontests" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="background-color:#449d44;">
+<h4 class="modal-title" id="modal-header" style="color:white;">Thank you for registering.</h4>
+<a href="/contest/data-science-blogathon-26/" class="close mr-0">&times;</a>
+</div>
+<div class="modal-body">
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="add_approach_model" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="add_approach_modal_label" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="add_approach_modal_label">Add Approach Link</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<input type="hidden" name="csrfmiddlewaretoken" value="BcUu3nldyhHp0rkJmwXU8etfeTdZbLuJqHwQUtM4rOWa98uqnXDwaFMHX4fDCmPD">
+<label for="id_approach_link" class="control-label col-lg-2">User approach link</label>
+<div class="controls col-lg-8">
+<input class="textinput textInput form-control" id="id_approach_link" name="approach_link" type="url" value="" data-leaderboard_url="" required>
+</div>
+<p id="add_approach_message_error" class="text-danger"></p>
+</div>
+<div class="modal-footer">
+<button class="btn av-btn text-white px-4" onclick="submitApproach(this)">Create</button>
+</div>
+</div>
+</div>
+</div>
+<section class="av-contest-details-page">
+<div class="container">
+<div class="row">
+<div class="card mb-5">
+<picture>
+<source media="(max-width: 767px)" srcset="https://datahack-prod.s3.amazonaws.com/contest_icon/ICON_3_WnU6HHB_KojWf8g.png" class="card-img-top">
+<img loading='lazy' src="https://datahack-prod.s3.ap-south-1.amazonaws.com/__sized__/contest_cover/COVER-copy_2-thumbnail-1200x1200.png" alt="Flowers" class="card-img-top">
+</picture>
+<div class="card-header">
+<div class="alert-box">
+</div>
+<div class="card-header-info">
+<h1 class="card-title">Data Science Blogathon - 26</h1>
+<div class="card-header-contest-info">
+<span>
+<i class="fas fa-map-marker-alt"></i>
+Online
+</span>
+<span>
+<i class="far fa-calendar-alt"></i>
+08-11-2022 12:00 AM to 30-11-2022 11:59 PM
+</span>
+</div>
+<ul class="m-0 p-0 mt-2">
+<li>
+<span>
+<i class="fas fa-user"></i>
+1894
+</span>
+<p>Registered</p>
+</li>
+<li>
+<span>
+<i class="fas fa-trophy"></i>
+Assured Rewards + Total prizes worth INR 6 Lakh(≅USD 8000)
+</span>
+<p>Prizes</p>
+</li>
+</ul>
+</div>
+<div class="card-header-timer">
+<div id="countdown-timer"></div>
+<a class="btn av-btn-red px-4 text-uppercase mt-3" id="participate" href="/oidc/authenticate/?next=/contest/data-science-blogathon-26/register">Register</a>
+</div>
+</div>
+<div class="spinner-border text-primary d-tabel mx-auto mt-3 mb-3" role="status" id="av-api-response-loader" style="display:none;">
+<span class="sr-only">Loading...</span>
+</div>
+<div class="card-body">
+<div class="card-body-tabs">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="About-tab" data-toggle="tab" href="#About" role="tab" aria-controls="About" aria-selected="true" onclick="pushTabDetailsToDataLater('About Tab', 'Data Science Blogathon - 26', 'blogathon')">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Rules-tab" data-toggle="tab" href="#RulesTab" role="tab" aria-controls="RulesTab" aria-selected="false" onclick="pushTabDetailsToDataLater('Rules Tab', 'Data Science Blogathon - 26', 'blogathon')">Rules</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Timelines-tab" data-toggle="tab" href="#TimelinesTab" role="tab" aria-controls="TimelinesTab" aria-selected="false" onclick="pushTabDetailsToDataLater('Timelines Tab', 'Data Science Blogathon - 26', 'blogathon')">Timelines</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Rewards-tab" data-toggle="tab" href="#RewardsTab" role="tab" aria-controls="RewardsTab" aria-selected="false" onclick="pushTabDetailsToDataLater('Rewards Tab', 'Data Science Blogathon - 26', 'blogathon')">Rewards</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="LeaderBoard-tab" data-toggle="tab" href="#LeaderBoard" role="tab" aria-controls="LeaderBoard" aria-selected="false" onclick="showLeaderboard(this)">LeaderBoard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Discuss-tab" data-toggle="tab" href="#DiscussTab" role="tab" aria-controls="DiscussTab" aria-selected="false" onclick="showDiscussions(this)">Discuss</a>
+</li>
+</ul>
+</div>
+<div class="tab-content card-body-contents" id="myTabContent">
+<div class="tab-pane fade active show" id="About" role="tabpanel" aria-labelledby="about-tab">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12 mt-2">
+
+<h2>Data Science Blogathon 26<sup><span style="font-size: 13.75px;">th</span></sup>&nbsp;Edition</h2>
+<p><span style="font-weight: 400;">The best way to learn any concept, specifically in Data Tech, is by sharing it. Knowledge sharing not only helps you understand what you learned in more detail but sharing it with the community helps others understand how a particular Data Tech idea works.</span></p>
+<p><span style="font-weight: 400;">Analytics Vidhya has always been at the forefront of knowledge sharing, and we want to continue this trend among our community members/thought leaders/ industry experts.&nbsp;&nbsp;</span></p>
+<p><span style="font-weight: 400;">We are thrilled to announce the beginning of Analytics Vidhya&rsquo;s </span><strong>Data Science Blogathon 26<sup>th</sup></strong><strong>&nbsp;Edition</strong><span style="font-weight: 400;">. We take pride in publishing over 4500+ articles written by 800+ authors on diverse topics in Data Science, including Machine Learning, Deep Learning, Data Engineering, etc. We are only aiming to make it bigger, better, and wiser by each day.</span></p>
+<p><span style="font-weight: 400;">Here&rsquo;s what&rsquo;s in store for you at </span><strong>Data Science Blogathon 26<sup>th</sup></strong><strong>&nbsp;Edition</strong><span style="font-weight: 400;">:</span></p>
+<ul>
+<li><span style="font-weight: 400;">Best articles get published on Analytics Vidhya&rsquo;s Blog Space</span></li>
+<li><span style="font-weight: 400;">One-on-one feedback to each author</span></li>
+<li><span style="font-weight: 400;">Recognition with a global audience base</span></li>
+<li><span style="font-weight: 400;">Assured rewards on each published article</span></li>
+<li><span style="font-weight: 400;">Higher rewards scheme for &lsquo;Top 3 Articles of the Month'</span></li>
+<li><span style="font-weight: 400;">Chance to win an Apple iPad every month*</span></li>
+</ul>
+<p><span style="font-weight: 400;">Are you excited to be a part of our Data Science Community?</span></p>
+<h2>How do I Participate?</h2>
+<p><span style="font-weight: 400;">The competition starts on 8</span><span style="font-weight: 400;">th</span><span style="font-weight: 400;">&nbsp;November. To enter the competition, just press the register button above. Once you are registered, gather your thoughts and</span><a href="https://editor.analyticsvidhya.com/"> <span style="font-weight: 400;">start writing</span></a><span style="font-weight: 400;">. Here are a few pointers to make your writing and submission journey smoother:</span></p>
+<ul>
+<li><span style="font-weight: 400;">It takes 36-48 hours to review and provide feedback on each article.</span></li>
+<li><span style="font-weight: 400;">Once you see &lsquo;Shortlisted&rsquo; on the Editor, give it up to 48 hours for the article to reflect on the Analytics Vidhya blog.</span></li>
+</ul>
+<p><strong>You can also refer to the video below for a virtual walk-through of the Registration process and Editor Platform.</strong></p>
+<p><iframe title="registration_222" src="https://player.vimeo.com/video/747535962?h=3d01f9a6d3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="349" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<h2>What is AVCC?</h2>
+<p><span style="font-weight: 400;">AVCC or<strong> <a href="https://www.analyticsvidhya.com/creators-club/" target="_blank">Analytics Vidhya Creators&rsquo; Club</a></strong>&nbsp;is a community of loyal and applauded data science mavericks. All you need to join this club is to get 3 or more of your articles published in Blogathon/s.</span></p>
+<p><span style="font-weight: 400;">The membership comes with a plethora of benefits. You get upto ₹1800/$24 for every published article and a chance to showcase your work to a community of 3 million+. For more information on the benefits, head over to the &ldquo;Rewards&rdquo; tab above.</span></p>
+<p><span style="font-weight: 400;">Starting from </span><strong>8</strong><strong>th</strong><strong>&nbsp;November,</strong><span style="font-weight: 400;"> all AVCC Members will have </span><strong>30 days of free access to our AWS course!</strong></p>
+<p><strong>Warm Welcome our New AVCC Members</strong></p>
+<p><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/11/final-1.png" alt="Blogathon Timeline" /></p>
+<input type="hidden" name="purpose" id="purpose" value="blogathon">
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-12">
+<div class="contest-card-right-side sticky-top">
+<div style="margin-top:20px; margin-bottom: 5px;">
+
+<div class="modal fade" id="share-contest-modal" tabindex="-1" role="dialog" aria-labelledby="share-contest-modal-CenterTitle" aria-hidden="true">
+<div class="modal-dialog fixed-top" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Challenge a friend</h5>
+</div>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span>esc</span>
+</button>
+<div class="modal-body">
+<div id="show_contest_field" class="showContestField">
+<input type="text" class="form-control" id="share_with_others" name="search_user" autocomplete="off" placeholder="Enter Name" />
+<button type="submit" class="btn btn-default" id="share_contest_button">Share</button>
+<div id="users_list_share" class="showUsers"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div id="datahack-avbanner">
+<a href=""><img loading='lazy' class="" src="" alt="ALT" style="display: none;"></a>
+</div>
+</div>
+<script type="text/javascript" src="/static/js/debounce.09949f9f21c3.js"></script>
+<script>
+ $(document).ready(function() {
+  $("#users_list_share p").remove();
+  var index = -1;
+  $('#share_with_others').keydown(function(e){
+    var pressed=false
+    if($('#share_with_others').val()==''){
+      $("#users_list_share p").remove();
+      $(this).removeClass('focus-active');
+    }
+    if(e.keyCode==38){
+      // if up arrow key is pressed then decrease the index value.
+      index--;
+      if(index<0){
+        //if handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    else if(e.keyCode==40){
+      //if down arrow key is pressed then increase the index value.
+      index++
+      if(index > $('#users_list_share p').length-1){
+        // it handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    if(pressed==true){
+      /* if any arrow key is pressed then set the value of
+        that div to the input box... focus is handelled by 'active-search' class
+       */
+      $('#users_list_share p').removeClass('active-search')
+      $('#users_list_share p').eq(index).addClass('active-search')
+      $('#share_with_others').val($('#users_list_share p').eq(index).text())
+    }
+    if(e.keyCode==9){
+      // if tab is pressed then close the dropdown
+      $('#users_list_share p').remove()
+      $('#share_with_others').removeClass('focus-active');
+    }
+  });
+  $('#share_with_others').keyup(function(e){
+      /*when ever any key is pressed this event got fired*/
+      if($('#share_with_others').val()==''){
+        //if the input tag is empty then remove the focus form it and do not open the suggestor
+        $("#users_list_share p").remove();
+        $(this).removeClass('focus-active');
+      }
+      var user_name = $(this).val();
+      // no ajax for space(32), backspace(8), delete, down-arrow,up-arrow
+      if(user_name.length > 0 && e.keyCode != 40 && e.keyCode != 38 && e.keyCode != 32 && e.keyCode !=8){
+        $.ajax({
+          type: "POST",
+          url: "/contest/data-science-blogathon-26/search_mates/",
+          data: {user_name: user_name},
+          success:function(response){
+           $("#users_list_share").empty();
+           var len = response['users'].length
+            if (len==0){
+              // if length is 0 then close the dropdown css
+              $('#share_with_others').removeClass('focus-active');
+            }
+            else if(len!=0 && e.keyCode==8){
+              //if length not equal to 0 and backspace is pressed
+              $('#share_with_others').addClass('focus-active');
+            }
+            else{
+              $('#share_with_others').addClass('focus-active');
+              $('#share_with_others').focus()
+
+            }
+            for (var i=0;i<response['users'].length;i++){
+              $("<p>"+response['users'][i].av_discuss_user_id+"</p>").appendTo("#users_list_share");
+            }
+            $("#users_list_share p").bind("click",function(){
+              $("#share_with_others").val($(this).text()).focus()
+              $("#users_list_share").empty();
+              $('#share_with_others').removeClass('focus-active');
+            });
+          }
+        });
+        if(event.keyCode==13) {
+        $('#share_contest_button').click();
+      }
+      }
+  });
+    $("#slack_invite_av_btn").on("click", function(){
+      console.log("slack invite button was clicked")
+      $('#av-slack-preloader').css("display", "block")
+      $('#slack_invite_av_btn').css("display", "none")
+      $('#warningModal').modal('hide');
+      var data = {"email":"", "first_name":"", "csrfmiddlewaretoken":"BcUu3nldyhHp0rkJmwXU8etfeTdZbLuJqHwQUtM4rOWa98uqnXDwaFMHX4fDCmPD"};
+      $.ajax({
+        type : "POST",
+        url : "/slack",
+        data : data,
+        success : function(data)
+        {
+          $('#av-slack-preloader').css("display", "none")
+          $('#slack_invite_av_btn').css("display", "block")
+          if (data["data"]["ok"])
+          {
+            $("#modal-body1").html("You have been successfully invited. Please check your inbox for slack invite");
+            $("#modal-header1").html("Success");
+            $('#myModal1').modal('show');
+          }
+          else{
+            console.log("error was ", data["data"]);
+            if (data["data"]["ok"] == false) {
+              $("#modal-body").html(data["data"]["error"]);
+            } else {
+              $("#modal-body").html("Some error occurred. Please try again later");
+            }
+
+            $('#myModal').modal('show');
+          }
+        }
+      });
+    });
+
+    $("#warning_message_slack").click(function(){
+        $("#warning-modal-body").html("We cannot ensure your anonymity on slack. click to proceed anyways.");
+        $("#warning-modal-header").html("Warning");
+        $('#warningModal').modal('show');
+    });
+    $("#warning_message_share_challenge").click(function(){
+        $("#warning-modal-body").html("You cannot challenge a friend as you are anonymous user. click to proceed anyways.");
+        $("#warning-modal-header").html("Warning");
+        $('#warningModal').modal('show');
+    });
+  });
+$("#share_contest_button").click(function(){
+  var user_name = $("#share_with_others").val();
+  $("#share-contest-modal").modal("hide");
+  $.ajax({
+    type: "POST",
+    data: {user_name: user_name},
+    url: "/contest/data-science-blogathon-26/share/",
+    success:function(response){
+      console.log("in success share");
+      // alert("Mail sent successfully")
+      if(response['requested_user_status'] == 0) {
+        alert("No such user found");
+      }
+    },
+    error:function(err){
+      console.log("in error share");
+    }
+  });
+  // var u = ''
+  // console.log('u', u)
+})
+ </script>
+<script>
+ function editor_platform(){
+   window.open("https://editor.analyticsvidhya.com/", "_blank");
+ }
+ </script>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="RulesTab" role="tabpanel" aria-labelledby="rules-tab">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12">
+<ul>
+<li><span style="font-weight: 400;">The content of your article(s) shall be unique and not published anywhere else.</span></li>
+<li><span style="font-weight: 400;">Each article will be strictly checked for plagiarism, paraphrasing, and spun.</span></li>
+<li><span style="font-weight: 400;">The article must have 1000 words, failing which they will be rejected.</span></li>
+<li><span style="font-weight: 400;">You are free to make as many submissions as you want. But don&rsquo;t make multiple submissions of the same article.</span></li>
+<li><span style="font-weight: 400;">All the image sources and article references shall be cited at the end of the submission.</span></li>
+<li><span style="font-weight: 400;">The submissions will close on November 30th, 2022, 23:59 IST (GMT +5:30 hrs)</span></li>
+<li><span style="font-weight: 400;">You are not allowed to re-publish any of your articles elsewhere.</span></li>
+<li><span style="font-weight: 400;">We monitor the traffic on each article regularly. Analytics Vidhya holds the right to remove all suspicious traffic.</span></li>
+<li><span style="font-weight: 400;">Analytics Vidhya has the right to disqualify/reject any submission.</span></li>
+<li><span style="font-weight: 400;">The decision for all the awards, as declared by Analytics Vidhya, would be final.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="TimelinesTab" role="tabpanel" aria-labelledby="timelines-tab">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12">
+<p><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/11/Timeline-10.png" alt="Blogathon Timeline" /></p>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="RewardsTab" role="tabpanel" aria-labelledby="rewards-tab">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12">
+<h2>What are the Prizes on Offer?</h2>
+<h3><strong>Base Price</strong></h3>
+<p>Choose the Data Science content you want to create and win for each published article.</p>
+<p><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/09/Timeline-2.png" alt="Base Prize" /></p>
+<h3><strong><span style="color: green;">*</span> Special Topics: MLOps, Web 3.0, Blockchain, Interview Questions, Data Engineering (Specific Topics)</strong></h3>
+<p><strong>*Note: Will be considering following topics only as special category topics:</strong></p>
+<p><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/09/Timeline-1.png" alt="Special Topics" /></p>
+<h2>A New Submission Category - Guides!</h2>
+<p>As mentioned above, we continue to publish "Guides". <strong>Guides are intended to be a one-stop resource on specific topics in Data Engineering, Machine Learning and related topics.</strong> Since we receive multiple entries for Guides, only one Guide per topic will be published.<br /><br /></p>
+<p style="font-size: 11px;"><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/08/guide-categories.png" alt="Guide categories" /></p>
+<p>Here is an example of a Guide: <a href="https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/">K Means Clustering | K Means Clustering Algorithm in Python</a></p>
+<p>Feel free to explore any topic of your choice though - the only restriction is that it should be as comprehensive as possible and should be of a minimum of 2500 words in length. It should also be on a topic in the domain of Machine Learning, Deep Learning, Data Engineering, etc.</p>
+<h3><strong>Rewards Based on Views: Bonus Rewards</strong></h3>
+<p><strong><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/08/bonus-rewards.png" alt="bonus rewards" /></strong></p>
+<h3 class="w-100"><strong>Winners Prize</strong></h3>
+<ul class="w-100 float-left" style="font-size: 11px;">
+<li>
+<p>The top 3 Articles will be judged based on the number of unique pageviews.</p>
+</li>
+<li>
+<p>The top 3 Guides will be judged by the editorial team</p>
+</li>
+</ul>
+<p><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2022/08/Winner.png" alt="Winner" /></p>
+<h2 class="table-responsive">&nbsp;</h2>
+<h2 class="table-responsive">Lucky Draw! - Stand a Chance to Win an iPad (9th Gen)!*</h2>
+<p>You read that right - you even stand an opportunity to win the new iPad (9th Gen)! Every author in the blogathon will be eligible to win an iPad through a lucky draw where a single winner will be chosen!</p>
+<div class="table-responsive" style="font-size: 11px;">&nbsp;</div>
+<div class="table-responsive" style="font-size: 11px;"><img class="img-fluid" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/01/Ipad.png" alt="iPad" /></div>
+<p style="font-size: 11px;">&nbsp;</p>
+<p>This is an unmissable opportunity to get your hands on the latest Apple iPad that has the world swooning. Imagine the writing and reading you&rsquo;ll be able to accomplish on this blazing fast tablet.</p>
+<p><em class="text-danger">*</em>Terms and Conditions Apply</p>
+<p><br />* Note that the final consideration of guide is an editorial decision which is based on how unique your guide's topic is and how comprehensively have you explained all components of that topic.</p>
+<p><em class="text-danger">*</em> Note that the article will have to be technical and code-based in nature to be eligible for the above special categories. Listicles or career articles will not count.</p>
+<p><em class="text-danger">*</em> All International payments will be made via Paypal</p>
+<p style="text-align: justify;"><em class="text-success">*&nbsp;</em>For India-based authors, Pan Card and other bank details are imperative</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="LeaderBoard" role="tabpanel" aria-labelledby="Leaderboard-tab">
+</div>
+<div class="tab-pane fade" id="DiscussTab" role="tabpanel" aria-labelledby="discuss-tab">
+</div>
+<div class="tab-pane fade" id="WinnerTab" role="tabpanel" aria-labelledby="winner-tab">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="av-happy-clients av-happy-clients-blogathon ">
+<div class="container">
+<div class="row">
+<div class="clients-control-action">
+<h2><span class="d-block">Hear from our Top Blogathon Authors</span></h2>
+<p>
+With a mission to share knowledge in the domain of Data Science, our authors are here to share their success stories based on their passion for writing and contributing to our community.
+</p>
+<div class="arrow-action">
+<span class="prev"><i class="fas fa-chevron-left"></i
+            ></span>
+<span class="next"><i class="fas fa-chevron-right"></i
+            ></span>
+</div>
+</div>
+<div class="clients-testimonials blogathon-slider">
+<div class="av-slick-testiminials">
+<div class="clients-testimonials-card">
+<div class="clients-testimonials-title">
+<div class="image-wrapper mr-2">
+<img loading="lazy" src="/static/images/wd/alifia.e308fb5fd5ad.jpg" class="img-fluid">
+</div>
+<div class="title-wrapper">
+<h4>Alifia Ghantiwala</h4>
+<p>Blogathon 18 iPad Winner</p>
+<p>Senior Associate at Morgan Stanley</p>
+</div>
+</div>
+<div class="clients-testimonials-body">
+<p>I have been writing for Analytics Vidhya since April 2021 and that’s how my data science
+journey began. As I was learning data science on my own, it was essential to receive feedback.
+That is where Analytics Vidhya’s blogathon helped me. I would first read and research a topic,
+do projects from datasets available on Kaggle, and post which I would write articles on Analytics
+Vidhya through the Data Science Blogathons.</p>
+<p>Analytics Vidhya has a large data science community, which provided me with visibility and
+enabled me to receive a freelance offer! Your understanding would only improve when you
+receive feedback from fellow data scientists, and constructive feedback from their editorial team.
+Data Science Blogathon happens every month, and you receive a guaranteed stipend if your
+article is published. And if you are consistent and lucky, you might also win an Ipad like me:)
+Yes, you read it right! I am delighted to share that I have received an Ipad, 9th Gen from
+Analytics Vidhya in Blogathon 18 lucky draw. Hence, I would encourage students who plan to
+build a career in Data Science could leverage this exciting opportunity.</p>
+</div>
+</div>
+<div class="clients-testimonials-card">
+<div class="clients-testimonials-title">
+<div class="image-wrapper">
+<img loading="lazy" src="/static/images/wd/DevashreeSM.8201d0518e36.jpg" class="img-fluid">
+</div>
+<div class="title-wrapper">
+<h4>Devashree Subhash Madhugiri</h4>
+<p>Blogathon 17 iPad Winner</p>
+<p>Consultant at ShortHills Tech (Gold Microsoft Partner)</p>
+</div>
+</div>
+<div class="clients-testimonials-body">
+<p>Analytics Vidhya is an excellent platform for knowledge-sharing on AI and Data Science. You'll find well-written articles, guides, and follow-along tutorials on the latest AI and Data Science topics contributed by several authors from diverse backgrounds and professional levels.</p>
+<p>The monthly blogathons are a great way for students, freelancers, and professionals to showcase their expertise. The prizes and base rewards motivate authors to bring articles and guides on exciting topics. The feedback and the article publishing are quick, with timely paid remuneration for your contributions!</p>
+<p>I have been regularly participating in the monthly blogathons since July 2021, and it has been a great experience. I have even won prizes for my article and guide, and I also won an iPad in the lucky draw for Blogathon 17! </p>
+<p>I would highly recommend participating in the blogathon if you are a Data and AI enthusiast like me!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="av-contest-tabs" id="app">
+
+<div class="av-contest-content-row">
+<div class="container">
+<div class="tab-content withintab-contentes" id="contestTabContent">
+<div class="tab-pane fade show active" id="alltabs" role="tabpanel" aria-labelledby="alltabs-tab">
+<div class="av-card-with-hover events-card">
+
+<div class="row" id="closed" v-if="closedItems[0]">
+<h2 class="heading-with-bottom-line">Closed</h2>
+<closecard v-for="item in closedItems" v-bind:closed-item="item" v-if="item.status == 'closed' " v-bind:key="item.contest_id"></closecard>
+</div>
+<div class="spinner-border text-primary d-tabel mx-auto mt-3 mb-3" role="status" id="closedLoadingIconDiv" style="display:none;">
+<span class="sr-only">Loading...</span>
+</div>
+<button type="button" class="btn av-btn-red px-3 py-3" v-on:click="getFilteredClosedContest" v-if="closedHasNext == true" id="showMoreBtnClosed">Show more...</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    components: {
+      'closecard': {
+        props: {
+        'closedItem': Object,
+        },
+        methods: {
+        },
+        filters: {
+          //This is used for time the conent and title
+          trimTitle: function(value, length) {
+          return value.slice(0, length);
+          },
+          moment: function(date) {
+            var date = moment(date);
+            var dateString = date.format('MMM D, h:mm A');
+            return dateString+" IST";
+
+          }
+        },
+        template: `
+        <div class="col-lg-6 col-md-6 col-sm-12 position-relative mb-3">
+            <div class="av-left-thumb">
+              <div class="card">
+                <a :href="closedItem.participate_url" >
+                  <img loading='lazy' :src="closedItem.contest_icon.thumbnail">
+                  <div class="card-body">
+                    <h6 class="courses-name">{{ closedItem.contest_name }}</h6>
+                    <p><i class="far fa-calendar-alt"></i>{{closedItem.end_date_time | moment }}</p>
+                    <span v-if="closedItem.contest_prizes.length > 27" v-html="closedItem.contest_prizes.slice(0,27)+'...'"><i class="fas fa-trophy"></i></span>
+                    <span v-else v-html="closedItem.contest_prizes"><i class="fas fa-trophy"></i></span>
+                    <span><i class="fas fa-user"></i>{{closedItem.registration_count}}</span>
+                  </div>
+                </a>
+              </div>
+          </div>
+        </div>`
+      },
+
+    },
+    data () {
+      return {
+        closedItems: [],
+        selectedContest: '',
+        currentClosedPage: 1,
+        closedHasNext: true,
+        num_closed: 0,
+      }
+    },
+    mounted(){
+      this.getFilteredContest('');
+    },
+    methods:{
+      getFilteredContest: function(event) {
+        this.closedItems = [];
+        this.currentClosedPage = 1;
+        this.contestUpdate(event, "closed");
+      },
+      getFilteredClosedContest: function(event) {
+        this.currentClosedPage += 1;
+        this.contestUpdate(event, "closed", this.currentClosedPage);
+        var loader = document.getElementById('closedLoadingIconDiv')
+        loader.style.display = "block";
+        let showMoreBtn = document.getElementById('showMoreBtnClosed');
+        if (showMoreBtn) {
+          showMoreBtn.style.display = "none"
+        }
+      },
+      contestUpdate: function(event, contestStatus, page=1) {
+        vuethis = this;
+        var onlyFeatured = false;
+        if (event) {
+          var purpose = event.target.dataset.contestfilters;
+          if(purpose == 'featured') {
+            onlyFeatured = true;
+          } else {
+            onlyFeatured = false;
+          }
+        }
+        else {
+          var purpose = "all";
+        }
+
+        vuethis.selectedContest = purpose;
+        $.ajax({
+          cache: false,
+          url: "/contest/contest_all_filtered",
+          data: {
+            'page': page,
+            'only_featured': onlyFeatured,
+            'purpose': 'blogathon',
+
+          },
+          success: function (data) {
+            if(data["contests"].length > 0) {
+                for(var i=0; i < data["contests"].length; i++){
+                  let con = data["contests"][i];
+                  vuethis.closedItems.push(con);
+                }
+              }
+              vuethis.closedHasNext = data["has_next"];
+              var element = document.getElementById('closedLoadingIconDiv')
+              element.style.display = 'none';
+              let showMoreBtn = document.getElementById('showMoreBtnClosed');
+              if (showMoreBtn) {
+                showMoreBtn.style.display = "block"
+              }
+              vuethis.num_closed = data["num_contests"];
+          },
+          error: function(data) {
+            console.log("Error with data")
+            console.log(data)
+
+          }
+        });
+      },
+    },
+  })
+
+</script>
+<script src="/static/js/jquery.waypoints.min.7d05f92297de.js"></script>
+<script src="/static/js/infinite.min.a9e9aa085994.js"></script>
+</section>
+<div class="container">
+<div class="row">
+</div>
+</div>
+<a href="https://www.analyticsvidhya.com/contact/" target="_blank" class="btn text-white px-2 av-btn" id="av_Feedback">Support <i class="fas fa-comment-dots"></i></a>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-12">
+<a href="https://www.analyticsvidhya.com/">
+<img loading='lazy' src="https://av-public-assets.s3.ap-south-1.amazonaws.com/logos/AV_logo_wite.png" alt='Analytics Vidhya' width="85%">
+</a>
+<div class="download-av-app">
+<h6 class="d-flex align-items-center">Download App</h6>
+<a rel="nofollow" href="https://play.google.com/store/apps/details?id=com.analyticsvidhya.android" target="_blank">
+<img loading='lazy' src="/static/images/play_store_icon.49aadc124788.svg" alt='play store'>
+</a>
+<a rel="nofollow" href="https://apps.apple.com/us/app/analytics-vidhya/id1470025572" target="_blank">
+<img loading='lazy' src="/static/images/app_Store_icon.9eda9dd200b5.svg" alt='App Store'>
+</a>
+</div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-12">
+<div class="av-links">
+<ul>
+<li>
+<h6>Analytics Vidhya</h6>
+<a href="https://www.analyticsvidhya.com/about/">About Us</a>
+<a href="https://www.analyticsvidhya.com/team/">Our Team</a>
+<a href="https://www.analyticsvidhya.com/careers/">Careers</a>
+<a href="https://www.analyticsvidhya.com/contact/">Support</a>
+</li>
+<li>
+<h6>Data Scientists</h6>
+<a href="https://www.analyticsvidhya.com/blog/">Blog</a>
+<a href="https://datahack.analyticsvidhya.com/">Hackathon</a>
+<a href="https://discuss.analyticsvidhya.com/">Discussions</a>
+<a href="https://www.analyticsvidhya.com/jobs/">Apply Jobs</a>
+</li>
+<li>
+<h6>Companies</h6>
+<a href="https://www.analyticsvidhya.com/corporate/">Post Jobs</a>
+<a href="https://courses.analyticsvidhya.com/">Trainings</a>
+<a href="https://datahack.analyticsvidhya.com/">Hiring Hackathons</a>
+<a href="https://www.analyticsvidhya.com/contact/">Advertising</a>
+ </li>
+<li>
+<h6>Visit us</h6>
+<div class="av-get-social">
+<a rel="nofollow" href="https://www.facebook.com/AnalyticsVidhya/" target="_blank" class="social-visit fb mr-2">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a rel="nofollow" href="https://www.linkedin.com/company/analytics-vidhya/" target="_blank" class="social-visit in mr-2">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a rel="nofollow" href="https://www.youtube.com/channel/UCH6gDteHtH4hg3o2343iObA" target="_blank" class="social-visit utub mr-2">
+<i class="fab fa-youtube"></i>
+</a>
+<a rel="nofollow" href="https://twitter.com/analyticsvidhya" target="_blank" class="social-visit tw mr-2">
+<i class="fab fa-twitter"></i>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-link-bottom">
+<div class="container">
+<div class="row">
+<div class="mr-auto">
+<p>© Copyright 2013-2022 Analytics Vidhya.</p>
+</div>
+<div class="ml-auto">
+<a href="https://www.analyticsvidhya.com/privacy-policy/" target="_blank">Privacy Policy</a>
+<a href="https://www.analyticsvidhya.com/terms/" target="_blank">Terms of Use</a>
+<a href="https://www.analyticsvidhya.com/refund-policy/" target="_blank">Refund Policy</a>
+</div>
+</div>
+</div>
+</div>
+
+</footer>
+
+<div class="cookies-based-content bg-dark-color" id="Cookies">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12 offset-md-2">
+<span aria-hidden="true" class="close cookies-close" onclick="close_cookie()">&times;</span>
+<p>
+We use cookies essential for this site to function well. Please click <button type="button" id="cookie_consent" onclick="set_cookie()" class="btn btn-sm btn-org cookies-close">Accept</button> to help us improve its usefulness with additional cookies. Learn about our use of cookies in our <a href="https://www.analyticsvidhya.com/privacy-policy/">Privacy Policy</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+<form id="logout-form" action="/oidc/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="BcUu3nldyhHp0rkJmwXU8etfeTdZbLuJqHwQUtM4rOWa98uqnXDwaFMHX4fDCmPD">
+</form>
+<script src="/static/js/rrssb.bbe41f99bb78.js"></script>
+<script src="/static/js/main.883426f10d65.js"></script>
+<script src="/static/js/moment.0941fc7ec398.js"></script>
+<script src="/static/js/moment-timezone-with-data.e983a7d04754.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.1/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/js/mention.plugin.36350daebc30.js"></script>
+<script>
+var blogathondiscussSocket = ''
+$(document).ready(function(){
+  
+  
+  // store the currently selected tab in the hash value
+  $("ul.nav-tabs > li > a").on("shown.bs.tab", function(e) {
+    var id = $(e.target).attr("href").substr(1);
+    window.location.hash = id;
+  });
+  // on load of the page: switch to the currently selected tab
+  var activeTab = window.location.hash;
+  if(activeTab=="#LeaderBoard"){
+      $('#LeaderBoard-tab').trigger("click");
+      $('#myTab a[href="' + activeTab + '"]').tab('show');
+  } else if (activeTab == "#RulesTab") {
+    $('#Rules-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if (activeTab == "#DiscussTab") {
+    $('#Discuss-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#TimelinesTab"){
+    $('#Timelines-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#RewardsTab"){
+    $('#Rewards-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#WinnerTab"){
+    $('#Winner-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }
+  else {
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }
+  if($("#terms_and_cond")){
+    $("#terms_and_cond").modal("show");
+  }
+  // modal to display similar contests
+  
+    $('#similarcontests').modal("hide");
+  
+
+});
+
+function showDiscussions(obj) {
+  console.log("inside discuss")
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  contest_slug = 'data-science-blogathon-26'
+  contest_id = '5464'
+  blogathondiscussSocket = new WebSocket(((window.location.protocol === 'https:') ? 'wss://' : 'ws://') +window.location.host+'/ws/discussion/'+contest_id+'/'+contest_slug+'/');
+  console.log(blogathondiscussSocket)
+  $('#DiscussTab').load("/contest/data-science-blogathon-26/discussions/None/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'DiscussTab',
+    'datahack_DetailPage_tab_contestName': 'Data Science Blogathon - 26',
+    'datahack_DetailPage_tab_contestPurpose': 'blogathon'
+  });
+
+}
+
+
+function showLeaderboard(obj) {
+  console.log("inside leaderboard")
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+    $('#LeaderBoard').load( "/contest/data-science-blogathon-26/lb/1/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'LeaderBoardTab',
+    'datahack_DetailPage_tab_contestName': 'Data Science Blogathon - 26',
+    'datahack_DetailPage_tab_contestPurpose': 'blogathon'
+  });
+
+}
+
+function pushTabDetailsToDataLater(tab_name, contest_name, contest_purpose){
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': tab_name,
+    'datahack_DetailPage_tab_contestName': contest_name,
+    'datahack_DetailPage_tab_contestPurpose': contest_purpose
+  });
+  }
+
+
+
+
+
+$(document).ready(function(){
+       var height = $("#main_content").height();
+       $("#left_side_bar").height(height);
+});
+
+
+</script>
+<script>
+var contest_type = ''
+
+    var contest_type = 'activeContest'
+
+dataLayer.push({
+  event:"datalayer_click",
+  'datahack_allContest_contestType': contest_type,
+  'datahack_allContest_url': window.location.href,
+  'datahack_allContest_contestName': 'Data Science Blogathon - 26',
+  'datahack_allContest_contestPurpose': 'blogathon'
+  });
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="https://brahma.analyticsvidhya.com/static/js/events.js" defer></script>
+<script type="text/javascript">
+      $(document).ready(function(){
+        if(localStorage.getItem("cookie_consent_datahack")){
+         $("#Cookies").css("display", "none");
+        }
+        $('.av-slick-testiminials').slick({
+          infinite: true,
+          dots: false,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
+              }
+            }
+          ]
+
+        });
+
+        // Slider custom control
+        $('.prev').click(function(){
+          $('.av-slick-testiminials').slick('slickPrev');
+        })
+
+        $('.next').click(function(){
+          $('.av-slick-testiminials').slick('slickNext');
+        })
+      });
+
+    </script>
+
+<div class="av-feedback-form" id="avFeedbackFrom">
+<div class="card">
+<div class="card-body">
+<h4 class="card-title">Feedback</h4>
+<h6>We believe in making Analytics Vidhya the best experience possible for Data Science enthusiasts.
+Help us by providing valuable Feedback.</h6>
+<div class="form-group">
+<label for="avFeedbackField"><small>Type your feedback <em class="text-danger">*</em></small></label>
+<textarea class="form-control" id="avFeedbackField" rows="3"></textarea>
+<p class="text-danger" id="errorMessage"><small></small></p>
+<p class="text-success" id="successMessage"><small></small></p>
+</div>
+</div>
+<button type="submit" class="btn text-white px-4 av-btn" onclick="submitFeedback(this)">Submit</button>
+</div>
+</div>
+
+<script type="text/javascript" src="https://automation.analyticsvidhya.com/static/js/getFlashDetailsNew.js" defer></script>
+
+<script src="https://automation.analyticsvidhya.com/static/js/getAVBanner.js"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"76d85a9fe9de1077","token":"6dc69ea2ec65420db26006e7a2ffc709","version":"2022.11.0","si":100}' crossorigin="anonymous"></script>
+</body>
+<script>
+
+  function submitFeedback(obj) {
+    var avTextField = $('#avFeedbackField').val();
+    if(avTextField == "") {
+     $('#errorMessage').html('Please enter a description.')
+
+    }
+    else
+    {
+      let url = "/post_feedback/"
+      var data = {
+        "comment": avTextField
+      };
+
+
+      $.ajax({
+           url: url,
+           type: 'POST',
+           data: JSON.stringify(data),
+           dataType: "json",
+           contentType: 'application/json',
+           success: function(data) {
+              if (data["success"]) {
+                $('#errorMessage').html('')
+                $('#successMessage').html('Thanks for your valuable feedback. It will help us make the platform bug-free and more useful for you and other users in the community.')
+                $('#avFeedbackField').val('').empty();
+              }
+
+           },
+           error : function(err){
+             if (data["error"]) {
+                $('#errorMessage').html('Please enter a description.')
+                $('#successMessage').html('')
+             }
+           }
+
+       });
+     }
+
+  }
+
+</script>
+
+<script>
+  function set_cookie(){        
+    localStorage.setItem("cookie_consent_datahack", true);
+    $("#Cookies").css("display", "none");
+  }
+
+  function close_cookie(){        
+    $("#Cookies").css("display", "none");
+  }
+</script>
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+  </script>
+</html>
