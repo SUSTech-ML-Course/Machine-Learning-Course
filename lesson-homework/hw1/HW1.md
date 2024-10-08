@@ -6,7 +6,7 @@
 
 Consider the polynomial function:
 
-$$y(x,\mathbf{w})=w_{0}+w_{1}x+w_{2}x+...+w_Mx^M=\sum^M_{i=0}w_ix^i$$
+$$y(x,\mathbf{w})=w_{0}+w_{1}x+w_{2}x^2+...+w_Mx^M=\sum^M_{i=0}w_ix^i$$
 
 Calculate the coefficients $\mathbf{w}=\{w_i\}$ that minimize its sum-of-squares error function. Here a suffix $i$ denotes the index of a component, whereas $(x)^i$ denotes $x$ raised to the power of $i$.
 
