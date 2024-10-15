@@ -10,6 +10,9 @@ In this project, please choose **ONE** of the following eight jobs (choosing mor
  + [6. Vehicle road cooperative](#6-vehicle-road-cooperative)
  + [7. RL-based Motion Planning for Robot](#7-rl-based-motion-planning-for-robot)
  + [8. Semantic Segmentation](#8-semantic-segmentation)
+ + [9. Scenario Generation via Diffusion Model](#9-scenario-generation-via-diffusion-model)
+ + [10. 3D Object Detection with Active Learning for Autonomous Driving](#10-3d-object-detection-with-active-learning-for-autonomous-driving)
+ + [11. Bayesian Neural Network for detection](#11-bayesian-neural-network-for-detection)
 
 ## 1. Object detection and tracking
 
@@ -1025,3 +1028,244 @@ Advanced natural language processing Fall 2023, Prof. Guanhua Chen, SUSTech
 
 All papers, codes and tutorials mentioned. Shout-out to open-source.
 
+
+## 9. Scenario Generation via Diffusion Model
+`Author: Rui Gao Date: 2024/10/14`
+### Project Background
+Scenario generation for decision-making and planning in autonomous driving is a critical aspect of autonomous vehicle technology. It is primarily used to simulate and evaluate how the vehicle behaves in complex and dynamic environments.
+
+Autonomous vehicles need to navigate complex, unpredictable environments where they interact with other vehicles, pedestrians, and various obstacles. Decision-making and planning in such situations require the vehicle to anticipate and respond to a wide range of possible scenarios. Manually designing and testing all these possible situations is impractical due to the vast number of potential driving conditions and safety-critical events that may arise.
+
+To address this, scenario generation helps create diverse, realistic, and sometimes rare driving situations that an autonomous vehicle might encounter. These scenarios include urban traffic, highway merging, intersection crossing, and emergency situations such as sudden braking by another car or unexpected pedestrian crossings. By generating these scenarios, autonomous systems can be thoroughly tested in virtual environments before real-world deployment.
+
+### Project Description
+![Generated scenarios](img/scenario.png)
+There are numerous challenges in the current research on scene generation, but the development of new technologies has provided innovative approaches to addressing these issues. Compared to manually crafted, rule-based scene generation algorithms, deep learning-based methods offer superior scalability in generating large-scale scenes while avoiding the cumbersome process of rule formulation and validation.
+
+By learning directly from real-world data, deep learning-based scene generation approaches produce more realistic scenes. The key requirement for this method is generative capability, with its core being a generative model such as VAE or GAN. In recent years, the Diffusion Model has demonstrated exceptional performance in various domains, including high-quality image and text generation, offering improved control over the generation process and enhanced interpretability. Therefore, this project aims to explore the use of the Diffusion Model for autonomous driving scene generation, investigating how to leverage the Diffusion Model’s controllable training and inference capabilities to generate challenging scenarios for autonomous driving. These generated scenes will then be deployed in the CARLA simulator for further simulation testing.
+
+### Project Objectives
+- Understand the fundamental principles and application methods of diffusion models.
+- Implement a scene generation algorithm based on diffusion models.
+- Generate safety-critical scenes.
+- Import the generated scenes into CARLA and test the existing AD algorithms.
+
+
+### Prerequisite Knowledge
+
+#### Scenario Generation
+
+![Catalog of methods](img/methodintro.png)
+1. An introduction to scenario generation([A Survey on Safety-Critical Driving Scenario Generation—A Methodological Perspective](https://ieeexplore.ieee.org/abstract/document/10089194)).
+
+#### Diffusion Model
+![DDPM](img/ddpm.png)
+1. An introduction to diffusion models, including their relationship with and comparison to other generative models.([Understanding Diffusion Models: A Unified Perspective](https://arxiv.org/pdf/2208.11970)).
+2. Blogs analyzing and understanding diffusion models from different perspectives.([Exploration of Generative Diffusion Models](https://spaces.ac.cn/archives/9119)).
+3. Implementation of diffusion models.([denoising-diffusion-pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch)).
+4. Library for state-of-the-art pretrained diffusion models for generating images, audio, and even 3D structures of molecules. ([diffusers](https://github.com/huggingface/diffusers)).
+
+### Project Workflow
+#### Prerequisite knowledge
+-  Familiar with the fundamentals of diffusion models and scene definitions, including their principles and application in current tasks.
+#### Getting Started
+- Refer to existing articles and open-source projects to conduct initial training and testing of current methods.
+#### Improvement
+- Fully leverage the characteristics of diffusion models to modify or design a scene generation framework with improved controllability based on the baseline, enabling the generation of key scenes as needed.
+#### Deployment
+- Familiar with the CARLA simulator and the types of scenes supported by CARLA.
+- Convert the generated scenes into suitable types for playback in CARLA.
+#### Testing
+- Select the autonomous driving planning algorithm to test (the existing Lane Follower in CARLA can be used).
+- Test the performance of the planning algorithm in different scenarios, including factors such as comfort and success rate.
+
+### Reference Projects
+There are many reference projects available here, and the open-source ones are clearly marked.
+1.  (RAL2024) DriveSceneGen: Generating Diverse and Realistic Driving Scenarios from Scratch, ([Code](https://github.com/SS47816/DriveSceneGen))
+2.  WcDT: World-centric Diffusion Transformer Traffic Scene Generation, ([Code](https://github.com/yangchen1997/WcDT))
+3.  (ICRA2023) Guided Conditional Diffusion for Controllable Traffic Simulation, ([Code](https://github.com/NVlabs/CTG))
+4.  (CVPR2024) ChatScene: Knowledge-Enabled Safety-Critical Scenario Generation for Autonomous Vehicles, ([Code](https://github.com/javyduck/ChatScene))
+5.  Versatile Behavior Diffusion for Generalized Traffic Simulation, ([Project](https://sites.google.com/view/versatile-behavior-diffusion))
+6.  Scenario Diffusion: Controllable Driving Scenario Generation With Diffusion
+7.  DiffScene: Diffusion-Based Safety-Critical Scenario Generation for Autonomous Vehicles
+
+
+## 10. 3D Object Detection with Active Learning for Autonomous Driving
+`Author: Yujie Wang Date: 2024/10/14`
+### **Introduction**
+
+In autonomous driving, 3D object detection plays a crucial role in identifying and tracking obstacles and vehicles using point cloud data from sensors like **LiDAR**. However, annotating 3D datasets is time-consuming and expensive, motivating the need for **active learning (AL)**. The goal of AL is to select the most informative data samples for labeling, reducing the amount of annotated data required while maintaining high model performance.
+
+---
+
+### **Project Objectives**
+
+- Learn the fundamentals of **active learning** and its application in 3D object detection.
+- Implement 3D object detection models (e.g., PointPillars or SECOND).
+- Use **active learning query strategies** to select the most informative 3D samples for labeling.
+- Evaluate the impact of active learning on detection accuracy with reduced labeling effort.
+
+---
+
+### **Datasets**
+
+- **KITTI 3D Object Detection Dataset** ([Link](https://www.cvlibs.net/datasets/kitti/)): Includes 3D point cloud data with labeled vehicles, pedestrians, and cyclists.
+- **nuScenes Dataset** ([Link](https://www.nuscenes.org/)): Contains LiDAR point clouds with 3D bounding boxes for various objects.
+- **Waymo Open Dataset** ([Link](https://waymo.com/open/)): Provides large-scale point cloud data with comprehensive annotations.
+
+---
+
+### **Project Workflow**
+
+#### **Step 1: Setup and Model Training**
+
+1. Select a **3D object detection model** \(M\), such as:
+   - **PointPillars**: A fast and lightweight model.
+   - **SECOND**: A voxel-based approach with higher accuracy.
+2. Use an **initial labeled subset \(D_s\)** (e.g., a small portion of KITTI dataset) to train the model \(M\).
+3. Test the model on a target test set \(D_t\) to establish the **baseline performance**.
+
+#### **Step 2: Implement Active Learning Query Strategies**
+
+1. **Uncertainty Sampling**: Select samples where the model has the lowest confidence in predictions.
+2. **Query-by-Committee (QBC)**: Use multiple models and select data where predictions disagree the most.
+3. **Diversity Sampling**: Ensure the selected samples represent a variety of traffic situations (e.g., highway, urban, rainy weather).
+4. Use **Voxel-wise uncertainty**: Specifically for point clouds, calculate uncertainty on a voxel-level to find ambiguous regions for labeling.
+
+#### **Step 3: Sample Annotation and Model Retraining**
+
+1. Label the **informative samples** selected through active learning.
+2. Add the labeled data to the original training set \(D_s\) and retrain the model \(M\).
+3. Evaluate the new model on the test set \(D_t\) to compare performance against the baseline.
+
+#### **Step 4: Iterate and Optimize**
+
+1. Repeat the query, annotation, and training steps in cycles.
+2. Track the improvement in **mean Average Precision (mAP)** and compare it with the baseline and previous iterations.
+3. Optimize the query strategy to minimize labeling cost while achieving high detection accuracy.
+
+---
+
+### **Code Resources**
+
+1. **Open3D-ML** ([GitHub](https://github.com/intel-isl/Open3D-ML)): Provides open-source implementations of 3D detection models like PointPillars and SECOND.
+2. **ALiPy** ([GitHub](https://github.com/NUAA-AL/alipy)): A library for active learning algorithms.
+3. **mmdetection3d** ([GitHub](https://github.com/open-mmlab/mmdetection3d)): An open-source framework for 3D detection models.
+
+---
+
+### **Expected Outcomes**
+
+- Gain hands-on experience with 3D object detection models and their training pipelines.
+- Understand the importance of **query strategies** in active learning to reduce annotation efforts.
+- Demonstrate the impact of **active learning** on model performance with iterative optimization.
+
+---
+
+### **Appendix**
+
+**Further Reading**:
+
+1. "VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection"
+2. "PointPillars: Fast Encoders for Object Detection from Point Clouds" 
+3. "CRB: Exploring Active 3D Object Detection from a Generalization Perspective" [[Paper](https://arxiv.org/abs/2301.09249)] [[Github](https://github.com/Luoyadan/CRB-active-3Ddet)]
+4. "TSceneJAL: Joint Active Learning of Traffic Scenes for 3D Object Detection" [Paper] [[Github](https://github.com/ansonlcy/TSceneJAL)]
+
+
+## 11. Bayesian Neural Network for detection
+
+`Author: Lingyu Yang Date: 2024/10/14`
+
+### Project Background
+A Bayesian Network, also known as a belief network or directed acyclic graph (DAG) model, is a probabilistic graphical model first introduced by Judea Pearl in 1985. 
+It serves as a model for handling the uncertainty in causal reasoning processes, mimicking human reasoning. The network topology is a directed acyclic graph (DAG).
+
+In a Bayesian Network, the nodes of the DAG represent random variables, which can be observable variables, hidden variables, or unknown parameters. Variables or propositions that are believed to have causal relationships (or are not conditionally independent) are connected by directed edges. 
+If two nodes are connected by a single arrow, one node is considered the "cause", and the other the "effect", leading to the generation of a conditional probability value between the two nodes.
+
+In summary, a Bayesian Network is formed by mapping random variables within a research system onto a directed graph, where the relationships between variables are represented based on their conditional independence. 
+The circles represent random variables, and arrows indicate conditional dependencies.
+
+### Project Description
+In this project, you will utilize BNNs for 2D/3D object detection. The network will be designed
+to estimate uncertainty alongside its predictions, improving the robustness and reliability of the detection model.
+
+### Project Objectives
++ Understand the principles behind Bayesian Neural Networks.
++ Improve existing work and quantify the uncertainties in the detection model.
++ (Optional)Improve detection performance and confidence in real-world environments.
+
+### Project Tasks
+1. Learn models with & without BNN, as well as detection datasets and benchmarks.
+2. Evaluate the trained BNN model using appropriate metrics on common datasets.
+Compare the model utilizing bayesian with other detection methods.
+
+   Recommended Steps: 
+
+    Select an object detection model $M$ (e.g., YOLOX)
+
+    → Train $M$ on a given dataset $D_{train}$, and test on a validation set $D_{val}$ to establish a baseline without uncertainty.
+
+    → Implement Bayesian layers (such as variational inference or Monte Carlo dropout) into your detection model $M$.
+
+    → Compare the results
+
+    OR
+
+    →→ Compare with the model $B$(with Bayesian e.e., pointrcnn-mdn)
+                      
+3. (Optional)Improve your model.(Example: on real-world object detection)
+
+### Materials
+#### Reading
+<table>
+  <colgroup>
+    <col style="border: 2px solid" span="5" />
+  </colgroup>
+  <tr>
+    <th>Material</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning</td>
+    <td><a href="https://dl.acm.org/doi/10.5555/3045390.3045502">https://dl.acm.org/doi/10.5555/3045390.3045502</td>
+  </tr>
+  <tr>
+    <td>What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?</td>
+    <td><a href="https://arxiv.org/abs/1703.04977v1">https://arxiv.org/abs/1703.04977v1</td>
+  </tr>
+  <tr>
+    <td>Understanding Measures of Uncertainty for Adversarial Example Detection</td>
+    <td><a href="https://arxiv.org/pdf/1803.08533">https://arxiv.org/pdf/1803.08533</td>
+  </tr>
+  <tr>
+    <td>Bayesian Neural Networks</td>
+    <td><a href="https://zhuanlan.zhihu.com/p/81170602">https://zhuanlan.zhihu.com/p/81170602</td>
+  </tr>
+  <tr>
+    <td>BNN——Variational Bayesian</td>
+    <td><a href="https://zhuanlan.zhihu.com/p/463674837">https://zhuanlan.zhihu.com/p/463674837</td>
+  </tr>
+  <tr>
+    <td>Fundamental BNN: Theory and Code</td>
+    <td><a href="https://zhuanlan.zhihu.com/p/263053978">https://zhuanlan.zhihu.com/p/263053978</td>
+  </tr>
+</table>
+
+#### Datasets and tools
++ [KITTI](https://www.cvlibs.net/datasets/kitti/) – A popular dataset for 2D/3D object detection.
++ [NuScenes](https://www.nuscenes.org/) – A dataset providing LiDAR, camera, and radar data for autonomous driving tasks.
++ [Waymo Open Dataset](https://waymo.com/open/) – A large-scale dataset for 2D/3D detection in autonomous driving.
++ [Pyro](https://pyro.ai/) –  A library for deep probabilistic modeling
++ [TensorFlow Probability](https://www.tensorflow.org/probability) – A library for probabilistic reasoning and Bayesian modeling
+
+#### Detection models
+With bayesian:
+
+[pointrcnn-mdn](https://github.com/tendo518/pointrcnn-mdn)
+
+Common Detection:
+
+[YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
+
+[MMdetection](https://github.com/open-mmlab/mmdetection)
