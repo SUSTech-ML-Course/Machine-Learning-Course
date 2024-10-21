@@ -6,10 +6,9 @@
 
 Please write up your responses to the following problems clearly and concisely. We require you to write up your responses with A4 paper. You are allowed and encouraged to work together. You may discuss the homework to understand the problem and reach a solution in groups. *However, each student must write down the solution independently.* You must understand the solution well enough in order to reconstruct it by yourself. (This is for your own benefit: you have to take the exams alone.)
 
-- ***Written Homeworks.*** All calculation problems MUST be written on a pdf document or a word document to bb. Submitting the scan or photo version will **NOT** be accepted.
+- ***Written Homeworks.*** All calculation problems MUST be written on a pdf document.
 
-- ***Coding Homeworks.*** On online judge. Will be released soon.
-
+- ***Coding Homeworks.*** On online judge.
 
 
 ## Question 1
@@ -42,9 +41,9 @@ $$    \mathbb{E}[\mathbf{z}]=\left(   \begin{array}{c}    \mu \\ \mathbf{A}\mu \
 
 ## Question 3
 
-Show that the covariance matrix $\Sigma$ that maximizes the log likelihood function is given by the sample covariance
+Show that the covariance matrix $\Sigma$ that maximizes the log likelihood function of a multivariate Gaussian is given by the sample covariance
 
-$$\mathrm{ln}p(\mathbf{X}|\mu, \Sigma)=-\frac{ND}{2}\mathrm{ln}(2\pi)-\frac{N}{2}\mathrm{ln}|\Sigma|-\frac{1}{2}\sum^N_{n=1}(\mathbf{x}_n-\mu)^\mathrm{T}\Sigma^{-1}(\mathbf{x}_n-\mu).$$
+$$\Sigma_{ML}=\frac{1}{N-1}\sum_{n=1}^N(x_n-\mu_{ML})(x_n-\mu_{ML})^T$$
 
 Is the final result symmetric and positive definite (provided the sample covariance is nonsingular)?
 
