@@ -21,7 +21,7 @@ In this lab, the goal is to write a software pipeline to identify vehicles in a 
   - Create *heat map* for each frame
   - Draw a bounding box for each detected vehicle
 
-It doesn’t matter that you do not understand most terms above. We will provide a framework for implement SVM, all you need is to **all you need is tuning parameters and make the pipeline work well** . We expect that you can read the code through and figure out how the whole framework works.
+It doesn’t matter that you do not understand most terms above. We will provide a framework for implement SVM, all you need is to **all you need is tuning parameters and make the pipeline work well**. We expect that you can read the code through and figure out how the whole framework works.
 
 ---
 
@@ -71,22 +71,24 @@ The `descriptor` class in `descriptor.py` is used to extract HOG features which 
 
 Not all parameters are useful for classification and too many cells will reduce computational speed.
 
-`<font color=red>`You need to try different orientations to get the highest test set accuracy `</font>`.
+<font color=red>You need to try different orientations to get the highest test set accuracy</font>.
 
 ### Color Space
 
-There are many color spaces: `RGB`, `HSV`, `HLS`, `YUV`, `YCrCb` and `LUV`. Initially we use `ycrcb` and you need to try others and `<font color=red>`select a color space with the highest test set accuracy `</font>`.
+There are many color spaces: `RGB`, `HSV`, `HLS`, `YUV`, `YCrCb` and `LUV`. Initially we use `ycrcb` and you need to try others and <font color=red>select a color space with the highest test set accuracy</font>.
 
 ## SVM Classifier
 
-Before performing a SVM, `<font color=red>` you should standardize raw data, as SVM algorithm is based on distance and scale will influence the result `</font>`.
+Before performing a SVM, <font color=red> you should standardize raw data, as SVM algorithm is based on distance and scale will influence the result</font>.
 
 Then, you need to use SVM in scikit-learn library:
 
 ```python
 from sklearn.svm import LinearSVC
 """
-sklearn.svm.LinearSVC(penalty='l2', loss='squared_hinge', *, dual=True, tol=0.0001, C=1.0,multi_class='ovr', fit_intercept=True, intercept_scaling=1, class_weight=None, verbose=0, random_state=None, max_iter=1000)
+sklearn.svm.LinearSVC(penalty='l2', loss='squared_hinge', *, dual=True, tol=0.0001, 
+    C=1.0,multi_class='ovr', fit_intercept=True, intercept_scaling=1, class_weight=None,
+    verbose=0, random_state=None, max_iter=1000)
 """
 svc = LinearSVC(C=1e9)
 svc.fit(X_train, y_train)
@@ -123,7 +125,7 @@ def slidingWindow(image_size, init_size=(64, 64), x_overlap=0.5, y_step=0.05,
      return windows
 ```
 
-Its main idea is to extract a small patch using a window from a big picture so you can apply your classifier to it. Implement here directly generates many windows in an area rather than sliding a single window. Pay attention that `<u>`the closer window is to camera, the bigger the window's size is `</u>`.
+Its main idea is to extract a small patch using a window from a big picture so you can apply your classifier to it. Implement here directly generates many windows in an area rather than sliding a single window. Pay attention that <u>the closer window is to camera, the bigger the window's size is </u>.
 
 You can call `display_windows()` in `slidingwindow.py` to see these windows, they are like this:
 
@@ -162,11 +164,11 @@ def detectVideo(...):
 
 Please finish the Exercise.
 
-Please download the code and data,. You should **firstly train your SVM, then you need to adjust hyperparameters of HOG 、sliding window、SVM、Detector**.
+Please download the code and data. You should **firstly train your SVM, then you need to adjust hyperparameters of HOG 、sliding window、SVM、Detector**.
 
 You can test your code on *test_video.mp4*. If the detecting result is good enough, save it as *result_video.mp4*.
 
 What you need to submit:
 
-1. Files: *train.py*. *experiment.py*
-2. Video: your detecting result video (*result_video.mp4*)
+1. Files: **train.py**. **experiment.py**
+2. Video: your detecting result video (**result_video.mp4**)
