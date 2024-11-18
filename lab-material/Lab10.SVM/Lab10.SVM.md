@@ -160,9 +160,7 @@ def detectVideo(...):
 
 ## Lab Assignment
 
-Please finish the **Exercise** and answer **Questions**.
-
-### Exercise 1(100 points)
+Please finish the Exercise.
 
 Please download the code and data,. You should **firstly train your SVM, then you need to adjust hyperparameters of HOG 、sliding window、SVM、Detector**.
 
@@ -172,10 +170,3 @@ What you need to submit:
 
 1. Files: *train.py*. *experiment.py*
 2. Video: your detecting result video (*result_video.mp4*)
-
-### Exercise 2 Questions(4 points)
-
-1. Can SVM be used for unsupervised clustering or data dimension reduction? Why?
-2. What are the strengths of SVMs; when do they perform well?
-3. What are the weaknesses of SVMs; when do they perform poorly?
-4. What makes SVMs a good candidate for the classification / regression problem, if you have enough knowledge about the data?
